@@ -6,8 +6,8 @@ import ScrollReveal from '@/components/ui/ScrollReveal';
 
 const STATS = [
   { value: 50,  suffix: '+', label: 'Projects Delivered' },
-  { value: 5,   suffix: '+', label: 'Years of Experience' },
   { value: 3,   suffix: '',  label: 'Core Disciplines' },
+  { value: 5,   suffix: '+', label: 'Years of Experience' },
   { value: 98,  suffix: '%', label: 'Client Satisfaction' }
 ];
 
