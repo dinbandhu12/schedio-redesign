@@ -12,9 +12,6 @@ const LOGOS = [
 ];
 
 export default function Clients() {
-  // Duplicate for seamless CSS loop
-  const doubled = [...LOGOS, ...LOGOS];
-
   return (
     <section
       style={{
@@ -36,7 +33,11 @@ export default function Clients() {
         </p>
       </ScrollReveal>
 
-      {/* Seamless CSS marquee — no Framer Motion restart glitch */}
+      {/*
+        Two inner sets, each with paddingRight === gap so every set's
+        width = N * logoWidth + N * gap.  Outer div = 2 × that width,
+        so translateX(-50%) lands exactly at the seam — no jump ever.
+      */}
       <div
         style={{
           overflow: 'hidden',
@@ -47,34 +48,46 @@ export default function Clients() {
         <div
           style={{
             display: 'flex',
-            alignItems: 'center',
-            gap: 'clamp(3rem, 7vw, 6rem)',
             animation: 'ticker-left 25s linear infinite',
             willChange: 'transform',
           }}
         >
-          {doubled.map((logo, i) => (
+          {[0, 1].map((setIdx) => (
             <div
-              key={i}
+              key={setIdx}
+              aria-hidden={setIdx > 0}
               style={{
+                display: 'flex',
+                alignItems: 'center',
+                gap: 'clamp(3rem, 7vw, 6rem)',
+                paddingRight: 'clamp(3rem, 7vw, 6rem)',
                 flexShrink: 0,
-                width: 'clamp(80px, 11vw, 130px)',
-                height: 40,
-                position: 'relative',
-                opacity: 0.4,
-                filter: 'grayscale(1) brightness(5)',
-                transition: 'opacity 0.3s ease',
               }}
-              onMouseEnter={e => ((e.currentTarget as HTMLElement).style.opacity = '0.85')}
-              onMouseLeave={e => ((e.currentTarget as HTMLElement).style.opacity = '0.4')}
             >
-              <Image
-                src={logo.src}
-                alt={logo.alt}
-                fill
-                style={{ objectFit: 'contain' }}
-                loading="lazy"
-              />
+              {LOGOS.map((logo, i) => (
+                <div
+                  key={i}
+                  style={{
+                    flexShrink: 0,
+                    width: 'clamp(80px, 11vw, 130px)',
+                    height: 40,
+                    position: 'relative',
+                    opacity: 0.4,
+                    filter: 'grayscale(1) brightness(5)',
+                    transition: 'opacity 0.3s ease',
+                  }}
+                  onMouseEnter={e => ((e.currentTarget as HTMLElement).style.opacity = '0.85')}
+                  onMouseLeave={e => ((e.currentTarget as HTMLElement).style.opacity = '0.4')}
+                >
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    fill
+                    style={{ objectFit: 'contain' }}
+                    loading="lazy"
+                  />
+                </div>
+              ))}
             </div>
           ))}
         </div>

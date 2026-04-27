@@ -271,7 +271,7 @@ export default function Navbar({ isLoaded }: { isLoaded: boolean }) {
                           </span>
                           <span style={{
                             fontFamily: 'var(--font-display)',
-                            fontSize: 'clamp(2.2rem, 5vw, 4.2rem)',
+                            fontSize: 'clamp(2.2rem, 5vw, 3.5rem)',
                             fontWeight: 400,
                             letterSpacing: '-0.025em',
                             lineHeight: 1.08,

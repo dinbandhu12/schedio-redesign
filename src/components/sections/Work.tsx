@@ -3,9 +3,12 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import ScrollReveal from '@/components/ui/ScrollReveal';
+
+const cardEase = [0.16, 1, 0.3, 1] as [number, number, number, number];
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -31,7 +34,7 @@ const PROJECTS: Project[] = [
     title: 'Personal Portfolio',
     category: 'UI/UX · Web',
     year: '2024',
-    img: '/images/showcase/img-07.png',
+    img: '/images/showcase/c7-2.jpg',
     offset: 0,
     ratio: '4/5',
   },
@@ -41,7 +44,7 @@ const PROJECTS: Project[] = [
     title: 'Industrial Identity',
     category: 'Branding · Site',
     year: '2024',
-    img: '/images/showcase/img-05.png',
+    img: '/images/showcase/c2.png',
     offset: 40,
     ratio: '3/4',
   },
@@ -51,7 +54,7 @@ const PROJECTS: Project[] = [
     title: 'Travel Platform',
     category: 'Product · UX',
     year: '2024',
-    img: '/images/showcase/img-18.png',
+    img: '/images/showcase/c3.png',
     offset: -20,
     ratio: '4/5',
   },
@@ -61,7 +64,7 @@ const PROJECTS: Project[] = [
     title: 'Identity Refresh',
     category: 'Brand · System',
     year: '2023',
-    img: '/images/showcase/img-12.png',
+    img: '/images/showcase/c4.png',
     offset: 30,
     ratio: '3/4',
   },
@@ -71,7 +74,7 @@ const PROJECTS: Project[] = [
     title: 'SaaS Interface',
     category: 'Product · UI',
     year: '2023',
-    img: '/images/showcase/img-09.png',
+    img: '/images/showcase/c5.png',
     offset: -10,
     ratio: '4/5',
   },
@@ -81,7 +84,7 @@ const PROJECTS: Project[] = [
     title: 'Editorial Site',
     category: 'Web · CMS',
     year: '2023',
-    img: '/images/showcase/img-11.png',
+    img: '/images/showcase/c6.png',
     offset: 50,
     ratio: '3/4',
   },
@@ -251,16 +254,24 @@ export default function Work() {
           }}
         >
           {PROJECTS.map((p, i) => (
-            <Link
+            <motion.div
               key={p.num}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-80px' }}
+              transition={{ duration: 0.85, ease: cardEase, delay: i * 0.07 }}
+              style={{
+                flexShrink: 0,
+                width: 'clamp(240px, 26vw, 400px)',
+                transform: `translateY(${p.offset}px)`,
+              }}
+            >
+            <Link
               href="/work"
               onMouseEnter={() => setHovered(i)}
               onMouseLeave={() => setHovered(null)}
               className="snap-center lg:snap-none"
               style={{
-                flexShrink: 0,
-                width: 'clamp(240px, 26vw, 400px)',
-                transform: `translateY(${p.offset}px)`,
                 display: 'block',
                 scrollSnapStop: 'always',
               }}
@@ -427,6 +438,7 @@ export default function Work() {
                 </p>
               </div>
             </Link>
+            </motion.div>
           ))}
 
           {/* Closing marker card */}

@@ -175,3 +175,18 @@ a:hover, a:focus, a:visited { color: inherit; }
   body { cursor: auto; }
   .hidden-on-touch { display: none !important; }
 }
+
+/* ─── Services page: sticky card layout ─────────────────── */
+.services-card {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .services-card {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+  }
+  .services-card > div:first-child {
+    min-height: 0; /* let grid control height */
+  }
+}

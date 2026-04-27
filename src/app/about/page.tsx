@@ -42,16 +42,19 @@ const BELIEFS = [
     num: '01',
     title: 'Craft first',
     body: 'We obsess over the details most people never notice — the micro-interaction, the kerning, the half-pixel. Because everything adds up.',
+    img: '/images/showcase/c1.png',
   },
   {
     num: '02',
     title: 'Clarity always',
     body: 'Strip away everything that does not serve the story. Complexity is easy. Simplicity takes work.',
+    img: '/images/showcase/c2.png',
   },
   {
     num: '03',
     title: 'True collaboration',
     body: 'Your vision, our craft. We embed ourselves in your goals so the final product feels like yours — because it is.',
+    img: '/images/showcase/c3.png',
   },
 ];
 
@@ -498,57 +501,83 @@ export default function AboutPage() {
           style={{
             padding: 'clamp(4.5rem, 9vw, 8rem) clamp(1.25rem, 4vw, 3rem)',
             borderBottom: '1px solid var(--border)',
-            display: 'grid',
-            gap: 'clamp(2rem, 5vw, 4rem)',
-            alignItems: 'start',
           }}
-          className="lg:grid-cols-[1fr_2fr]"
         >
-          <div>
-            <ScrollReveal><p className="text-label" style={{ marginBottom: '1rem' }}>Beliefs — 03</p></ScrollReveal>
-            <ScrollReveal delay={0.06}>
-              <h2 style={{
-                fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(1.8rem, 4vw, 3.75rem)',
-                fontWeight: 400,
-                lineHeight: 1.05,
-                letterSpacing: '-0.03em',
-                color: 'var(--text)',
-              }}>
-                Three things<br />we live{' '}
-                <em style={{ fontStyle: 'italic', color: 'var(--text-muted)' }}>by.</em>
-              </h2>
-            </ScrollReveal>
+          {/* Header */}
+          <div style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: '1.5rem', marginBottom: 'clamp(3rem, 6vw, 5rem)' }}>
+            <div>
+              <ScrollReveal><p className="text-label" style={{ marginBottom: '1rem' }}>Beliefs — 03</p></ScrollReveal>
+              <ScrollReveal delay={0.06}>
+                <h2 style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: 'clamp(1.8rem, 4vw, 3.75rem)',
+                  fontWeight: 400,
+                  lineHeight: 1.05,
+                  letterSpacing: '-0.03em',
+                  color: 'var(--text)',
+                }}>
+                  Three things<br />we live{' '}
+                  <em style={{ fontStyle: 'italic', color: 'var(--text-muted)' }}>by.</em>
+                </h2>
+              </ScrollReveal>
+            </div>
           </div>
 
-          <div>
+          {/* Image cards — staggered entrance */}
+          <div style={{ display: 'grid', gap: 'clamp(0.75rem, 1.5vw, 1.25rem)' }} className="sm:grid-cols-3">
             {BELIEFS.map((b, i) => (
-              <ScrollReveal key={b.num} delay={i * 0.08}>
-                <div style={{
-                  display: 'grid',
-                  gridTemplateColumns: '3ch 1fr auto',
-                  gap: 'clamp(1rem, 2.5vw, 2rem)',
-                  alignItems: 'start',
-                  padding: 'clamp(1.5rem, 3vw, 2.5rem) 0',
-                  borderBottom: i < BELIEFS.length - 1 ? '1px solid var(--border)' : 'none',
-                  borderTop: i === 0 ? '1px solid var(--border)' : 'none',
-                }}>
-                  <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.6rem', letterSpacing: '0.22em', color: 'var(--text-dim)', paddingTop: '0.4rem' }}>
-                    {b.num}
-                  </span>
-                  <div>
-                    <h3 style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 'clamp(1.4rem, 2.5vw, 2.2rem)', fontWeight: 400, letterSpacing: '-0.02em', color: 'var(--text)', marginBottom: '0.65rem' }}>
-                      {b.title}
-                    </h3>
-                    <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.9rem', lineHeight: 1.75, color: 'var(--text-muted)', maxWidth: '52ch' }}>
-                      {b.body}
-                    </p>
-                  </div>
-                  <span aria-hidden style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 'clamp(3rem, 7vw, 7rem)', fontWeight: 400, lineHeight: 1, color: 'var(--border)', userSelect: 'none' }}>
+              <motion.div
+                key={b.num}
+                initial={{ opacity: 0, y: 64 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-60px' }}
+                transition={{ duration: 0.95, delay: i * 0.13, ease }}
+                style={{
+                  position: 'relative',
+                  aspectRatio: '4/5',
+                  borderRadius: 18,
+                  overflow: 'hidden',
+                  border: '1px solid var(--border)',
+                  cursor: 'none',
+                }}
+              >
+                <Image
+                  src={b.img}
+                  alt={b.title}
+                  fill
+                  style={{ objectFit: 'cover', filter: 'brightness(0.48) saturate(0.75)', transition: 'transform 0.9s cubic-bezier(0.16,1,0.3,1), filter 0.6s' }}
+                  onMouseEnter={e => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1.07)'; (e.currentTarget as HTMLImageElement).style.filter = 'brightness(0.55) saturate(0.85)'; }}
+                  onMouseLeave={e => { (e.currentTarget as HTMLImageElement).style.transform = 'scale(1)'; (e.currentTarget as HTMLImageElement).style.filter = 'brightness(0.48) saturate(0.75)'; }}
+                />
+                {/* Gradient vignette */}
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(9,9,8,0.93) 0%, rgba(9,9,8,0.22) 55%, transparent 100%)', pointerEvents: 'none' }} />
+
+                {/* Number badge */}
+                <div style={{ position: 'absolute', top: '1.5rem', left: '1.5rem' }}>
+                  <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.6rem', letterSpacing: '0.25em', color: 'var(--accent)', textTransform: 'uppercase' }}>
                     {b.num}
                   </span>
                 </div>
-              </ScrollReveal>
+
+                {/* Bottom content */}
+                <div style={{ position: 'absolute', bottom: '1.75rem', left: '1.75rem', right: '1.75rem' }}>
+                  <h3 style={{
+                    fontFamily: 'var(--font-display)',
+                    fontStyle: 'italic',
+                    fontSize: 'clamp(1.6rem, 2.5vw, 2.4rem)',
+                    fontWeight: 400,
+                    letterSpacing: '-0.025em',
+                    color: 'var(--text)',
+                    lineHeight: 1.05,
+                    marginBottom: '0.65rem',
+                  }}>
+                    {b.title}
+                  </h3>
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.87rem', color: 'var(--text-muted)', lineHeight: 1.65 }}>
+                    {b.body}
+                  </p>
+                </div>
+              </motion.div>
             ))}
           </div>
         </section>
@@ -571,7 +600,7 @@ export default function AboutPage() {
                 style={{
                   flexShrink: 0,
                   width: 'clamp(200px, 26vw, 360px)',
-                  aspectRatio: '4/3',
+                  aspectRatio: '5.5/4',
                   borderRadius: 14,
                   overflow: 'hidden',
                   position: 'relative',

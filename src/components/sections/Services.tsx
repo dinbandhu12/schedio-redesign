@@ -18,6 +18,7 @@ interface Service {
   tags: string[];
   deliverables: string[];
   img: string;
+  video?: string;
 }
 
 const SERVICES: Service[] = [
@@ -32,7 +33,7 @@ const SERVICES: Service[] = [
       'Usability & research',
       'Interface design language',
     ],
-    img: '/images/showcase/img-10.png',
+    img: '/images/showcase/design.png',
   },
   {
     num: '02',
@@ -45,7 +46,7 @@ const SERVICES: Service[] = [
       'Brand book & guidelines',
       'Palette, type & motion',
     ],
-    img: '/images/showcase/img-09.png',
+    img: '/images/showcase/branding.png',
   },
   {
     num: '03',
@@ -58,7 +59,7 @@ const SERVICES: Service[] = [
       'Custom WebGL & motion',
       'Core-Web-Vitals tuning',
     ],
-    img: '/images/showcase/img-11.png',
+    img: '/images/showcase/development.png',
   },
   {
     num: '04',
@@ -72,6 +73,7 @@ const SERVICES: Service[] = [
       'Editorial art direction',
     ],
     img: '/images/showcase/img-12.png',
+    video: '/images/elements/motion.mp4',
   },
 ];
 
@@ -212,6 +214,18 @@ export default function Services() {
                       'opacity 0.75s cubic-bezier(0.16,1,0.3,1), transform 1.1s cubic-bezier(0.16,1,0.3,1)',
                   }}
                 >
+                  {s.video ? (
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+      >
+        <source src={s.video} type="video/mp4" />
+      </video>
+    ) : (
                   <Image
                     src={s.img}
                     alt={s.title}
@@ -220,6 +234,7 @@ export default function Services() {
                     style={{ objectFit: 'cover' }}
                     priority={i === 0}
                   />
+                  )}
                 </div>
               ))}
 
@@ -424,7 +439,20 @@ export default function Services() {
                 // border: '1px solid var(--border)',
               }}
             >
+              {s.video ? (
+    <video
+      autoPlay
+      loop
+      muted
+      playsInline
+      preload="auto"
+      style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+    >
+      <source src={s.video} type="video/mp4" />
+    </video>
+  ) : ( 
               <Image src={s.img} alt={s.title} fill sizes="100vw" style={{ objectFit: 'cover' }} />
+  ) }
             </div>
 
             <p
