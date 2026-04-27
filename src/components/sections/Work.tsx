@@ -36,7 +36,7 @@ const PROJECTS: Project[] = [
     year: '2024',
     img: '/images/showcase/c7-2.jpg',
     offset: 0,
-    ratio: '4/5',
+    ratio: '3/4',
   },
   {
     num: '02',
@@ -56,7 +56,7 @@ const PROJECTS: Project[] = [
     year: '2024',
     img: '/images/showcase/c3.png',
     offset: -20,
-    ratio: '4/5',
+    ratio: '3/4',
   },
   {
     num: '04',
@@ -76,7 +76,7 @@ const PROJECTS: Project[] = [
     year: '2023',
     img: '/images/showcase/c5.png',
     offset: -10,
-    ratio: '4/5',
+    ratio: '3/4',
   },
   {
     num: '06',

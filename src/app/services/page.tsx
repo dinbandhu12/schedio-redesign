@@ -77,7 +77,7 @@ export default function ServicesPage() {
             padding: 'clamp(6rem, 10vw, 9rem) clamp(1.25rem, 4vw, 3rem) clamp(3rem, 5vw, 4.5rem)',
             display: 'flex',
             flexDirection: 'column',
-            justifyContent: 'flex-end',
+            justifyContent: 'center',
             position: 'relative',
             overflow: 'hidden',
             borderBottom: '1px solid var(--border)',
@@ -140,7 +140,7 @@ export default function ServicesPage() {
               }}
             >
               <p style={{ fontFamily: 'var(--font-body)', fontSize: 'clamp(0.9rem, 1.3vw, 1.05rem)', lineHeight: 1.8, color: 'var(--text-muted)', maxWidth: '46ch' }}>
-                From brand identity to fully engineered digital products — we cover every discipline needed to take your idea from concept to launch.
+                From brand identity to fully engineered digital products we cover every discipline needed to take your idea from concept to launch.
               </p>
               <Link
                 href="/work"

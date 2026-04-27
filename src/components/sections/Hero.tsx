@@ -79,7 +79,7 @@ export default function Hero({ isLoaded }: { isLoaded: boolean }) {
           aria-label="Crafting digital experiences from your vision to build an impact-driven web presence"
           style={{
             fontFamily: 'var(--font-display)',
-            fontSize: 'clamp(3rem, 8.5vw, 9.5rem)',
+            fontSize: 'clamp(3.2rem, 8.5vw, 9.5rem)',
             lineHeight: 1.0,
             letterSpacing: '-0.03em',
             fontWeight: 500,

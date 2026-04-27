@@ -62,7 +62,7 @@ export default function CTABanner() {
               }}
             />
             <p className="text-label" style={{ color: 'var(--text)' }}>
-              Booking Q3 · 2 slots left
+              Booking Q3 ·<br />3 slots left ·
             </p>
           </div>
         </ScrollReveal>

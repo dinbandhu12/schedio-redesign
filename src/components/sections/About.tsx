@@ -56,7 +56,7 @@ export default function About() {
           <h2
             style={{
               fontFamily: 'var(--font-display)',
-              fontSize: 'clamp(2.4rem, 7.2vw, 8.2rem)',
+              fontSize: 'clamp(2.6rem, 7.2vw, 8.2rem)',
               fontWeight: 400,
               lineHeight: 1.02,
               letterSpacing: '-0.035em',
@@ -290,7 +290,7 @@ export default function About() {
               gridTemplateColumns: '1fr 1.4fr',
               gridTemplateRows: '1fr 1fr',
               gap: 'clamp(0.65rem, 1vw, 1rem)',
-              height: 'clamp(280px, 85vw, 640px)',
+              height: 'clamp(280px, 70vw, 640px)',
             }}
           >
             {/* Tall left — spans both rows */}
