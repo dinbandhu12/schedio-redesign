@@ -25,6 +25,7 @@ export default function TransitionProvider({ children }: { children: React.React
 
   const navigate = useCallback((href: string) => {
     if (href === window.location.pathname) return;
+    if (transitioningRef.current) return; // prevent double-trigger
     hrefRef.current      = href;
     transitioningRef.current = true;
     setActive(true);
@@ -53,13 +54,16 @@ export default function TransitionProvider({ children }: { children: React.React
     return () => document.removeEventListener('click', handle);
   }, [navigate]);
 
-  // When pathname changes, navigation is done → lift curtain
+  // When pathname changes, navigation is done → lift curtain after a short delay
+  // The delay ensures the curtain stays visible even on pre-fetched/instant loads
   useEffect(() => {
     if (firstRender.current) { firstRender.current = false; return; }
-    if (transitioningRef.current) {
+    if (!transitioningRef.current) return;
+    const t = setTimeout(() => {
       transitioningRef.current = false;
       setActive(false);
-    }
+    }, 320);
+    return () => clearTimeout(t);
   }, [pathname]);
 
   return (

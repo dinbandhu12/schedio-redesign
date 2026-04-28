@@ -829,7 +829,7 @@ export default function WorkPage() {
       <main style={{ background: 'var(--bg)' }}>
 
         {/* HERO */}
-        <section style={{ minHeight: '100svh', padding: 'clamp(6rem, 10vw, 9rem) clamp(1.25rem, 4vw, 3rem) clamp(3rem, 5vw, 4.5rem)', display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative', overflow: 'hidden', borderBottom: '1px solid var(--border)' }}>
+        <section className="hero-full" style={{ padding: 'clamp(6rem, 10vw, 9rem) clamp(1.25rem, 4vw, 3rem) clamp(3rem, 5vw, 4.5rem)', display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative', overflow: 'hidden', borderBottom: '1px solid var(--border)' }}>
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1, ease }} style={{ position: 'absolute', top: 'clamp(5.5rem, 9vw, 7.5rem)', left: 'clamp(1.25rem, 4vw, 3rem)', right: 'clamp(1.25rem, 4vw, 3rem)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <p className="text-label">Work — 03</p>
             <p className="text-label" style={{ color: 'var(--text-dim)' }}>{String(PROJECTS.length).padStart(2, '0')} projects</p>

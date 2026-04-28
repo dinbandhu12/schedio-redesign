@@ -72,8 +72,8 @@ export default function ServicesPage() {
 
         {/* ══════════════════════════════ HERO ══════════════════════════════ */}
         <section
+          className="hero-full"
           style={{
-            minHeight: '100svh',
             padding: 'clamp(6rem, 10vw, 9rem) clamp(1.25rem, 4vw, 3rem) clamp(3rem, 5vw, 4.5rem)',
             display: 'flex',
             flexDirection: 'column',
@@ -210,10 +210,9 @@ export default function ServicesPage() {
 
           {/* ── Main two-column layout ── */}
           <div
-            className="md:grid"
+            className="md:grid hero-full"
             style={{
               gridTemplateColumns: '1fr 1.2fr',
-              minHeight: '100svh',
               gap: 'clamp(0.75rem, 1.5vw, 1.25rem)',
               padding: 'clamp(0.75rem, 1.5vw, 1.25rem)',
             } as React.CSSProperties}

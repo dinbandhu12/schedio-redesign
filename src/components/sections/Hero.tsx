@@ -30,9 +30,9 @@ function FadeUp({ children, delay, isLoaded, style }: {
 export default function Hero({ isLoaded }: { isLoaded: boolean }) {
   return (
     <section
+      className="hero-full"
       style={{
         position: 'relative',
-        minHeight: '100svh',
         display: 'flex',
         flexDirection: 'column',
         padding: '0 clamp(1.25rem, 4vw, 3rem)',
@@ -163,6 +163,7 @@ export default function Hero({ isLoaded }: { isLoaded: boolean }) {
             delay={1.25}
             isLoaded={isLoaded}
             style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center' }}
+            className="hero-cta-row"
           >
             <MagneticButton>
               <Link

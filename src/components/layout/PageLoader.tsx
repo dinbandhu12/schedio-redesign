@@ -1,19 +1,26 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
 interface PageLoaderProps {
   onComplete: () => void;
 }
 
+const LETTERS = 'SCHEDIO'.split('');
+
 export default function PageLoader({ onComplete }: PageLoaderProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const topRef       = useRef<HTMLDivElement>(null);
   const botRef       = useRef<HTMLDivElement>(null);
   const countRef     = useRef<HTMLSpanElement>(null);
-  const labelRef     = useRef<HTMLParagraphElement>(null);
+  const labelRef     = useRef<HTMLDivElement>(null);
   const [shown, setShown] = useState(true);
+
+  // Runs before first paint — letters are hidden before the user ever sees them
+  useLayoutEffect(() => {
+    gsap.set('.loader-letter', { yPercent: 120 });
+  }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -24,7 +31,15 @@ export default function PageLoader({ onComplete }: PageLoaderProps) {
         },
       });
 
-      // Count up 000 → 100
+      // Letters rise from below — scoped selector, staggered in sync with counter
+      tl.fromTo(
+        '.loader-letter',
+        { yPercent: 120 },
+        { yPercent: 0, duration: 0.7, ease: 'power3.out', stagger: 0.08 },
+        0
+      );
+
+      // Count up 000 → 100 in parallel
       const counter = { val: 0 };
       tl.to(counter, {
         val: 100,
@@ -35,9 +50,9 @@ export default function PageLoader({ onComplete }: PageLoaderProps) {
             countRef.current.textContent = String(Math.round(counter.val)).padStart(3, '0');
           }
         },
-      });
+      }, 0);
 
-      // Fade label
+      // Fade label out
       tl.to(labelRef.current, { opacity: 0, duration: 0.25 }, '-=0.1');
 
       // Curtain split
@@ -47,7 +62,8 @@ export default function PageLoader({ onComplete }: PageLoaderProps) {
         ease: 'power4.inOut',
         stagger: 0.05,
       }, '-=0.15');
-    }, containerRef);
+
+    }, containerRef); // scope — selectors are relative to containerRef
 
     return () => ctx.revert();
   }, [onComplete]);
@@ -87,23 +103,39 @@ export default function PageLoader({ onComplete }: PageLoaderProps) {
           flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          // gap: '0.75rem',
+          gap: '0.6rem',
           zIndex: 1,
           pointerEvents: 'none',
         }}
       >
-        {/* Text logo — always visible on dark bg */}
-        <p
-          style={{
-            fontFamily: 'var(--font-body)',
-            fontSize: 'clamp(1.6rem, 3vw, 2.4rem)',
-            fontWeight: 600,
-            letterSpacing: '0.04em',
-            color: 'var(--text)',
-          }}
-        >
-          SCHEDIO
-        </p>
+        {/* SCHEDIO — each letter clipped and rising from below */}
+        <div style={{ display: 'flex', alignItems: 'flex-end' }}>
+          {LETTERS.map((char, i) => (
+            <span
+              key={i}
+              style={{
+                display: 'inline-block',
+                overflow: 'hidden',
+                lineHeight: 1.1,
+              }}
+            >
+              <span
+                className="loader-letter"
+                style={{
+                  display: 'inline-block',
+                  fontFamily: 'var(--font-body)',
+                  fontSize: 'clamp(1.6rem, 3vw, 2.4rem)',
+                  fontWeight: 600,
+                  letterSpacing: '0.04em',
+                  color: 'var(--text)',
+                }}
+              >
+                {char}
+              </span>
+            </span>
+          ))}
+        </div>
+
         <p className="text-label">Design &amp; Development</p>
       </div>
 

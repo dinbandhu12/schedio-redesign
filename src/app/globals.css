@@ -161,6 +161,26 @@ a:hover, a:focus, a:visited { color: inherit; }
   to   { transform: rotate(360deg); }
 }
 
+/* ─── Hero height: 100svh desktop, 70svh mobile ─────────── */
+.hero-full {
+  min-height: 100svh;
+}
+@media (max-width: 767px) {
+  .hero-full {
+    min-height: 80svh;
+  }
+}
+
+/* ─── Hero CTA row: right on desktop, left on mobile ─────── */
+.hero-cta-row {
+  justify-content: flex-end;
+}
+@media (max-width: 767px) {
+  .hero-cta-row {
+    justify-content: flex-start;
+  }
+}
+
 /* ─── Reduced motion ─────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

@@ -242,8 +242,8 @@ export default function AboutPage() {
 
         {/* ══════════════════════════════ HERO ══════════════════════════════ */}
         <section
+          className="hero-full"
           style={{
-            minHeight: '100svh',
             padding: 'clamp(5.5rem, 9vw, 8rem) clamp(1.25rem, 4vw, 3rem) clamp(3rem, 5vw, 4.5rem)',
             display: 'flex',
             flexDirection: 'column',
