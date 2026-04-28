@@ -9,14 +9,16 @@ const EASE = [0.16, 1, 0.3, 1] as [number, number, number, number];
 /** Matches `Navbar` fixed header height so hero copy never sits under the bar */
 const NAVBAR_OFFSET = 'calc(4.5rem + clamp(1rem, 3vw, 2rem))';
 
-function FadeUp({ children, delay, isLoaded, style }: {
+function FadeUp({ children, delay, isLoaded, style, className }: {
   children: React.ReactNode;
   delay: number;
   isLoaded: boolean;
   style?: React.CSSProperties;
+  className?: string;
 }) {
   return (
     <motion.div
+      className={className}
       style={style}
       initial={{ opacity: 0, y: 28 }}
       animate={isLoaded ? { opacity: 1, y: 0 } : { opacity: 0, y: 28 }}
