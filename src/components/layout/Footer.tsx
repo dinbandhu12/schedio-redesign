@@ -282,12 +282,13 @@ export default function Footer() {
         }}
       >
         <span style={{ fontSize: '0.72rem', color: 'var(--text-dim)', letterSpacing: '0.05em' }}>
-          © 2025 Schedio · All Rights Reserved
+          © 2026 Schedio · All Rights Reserved
         </span>
         <div style={{ display: 'flex', gap: '1.5rem' }}>
           {[
-            { label: 'Privacy Policy',     href: '/privacy-policy' },
-            { label: 'Terms & Conditions', href: '/terms'          },
+            { label: 'Privacy Policy', href: '/privacy-policy' },
+            { label: 'Terms of Service', href: '/terms'        },
+            { label: 'Cookie Policy',  href: '/cookie-policy'  },
           ].map(item => (
             <Link
               key={item.label}

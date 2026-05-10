@@ -260,7 +260,7 @@ export default function Navbar({ isLoaded }: { isLoaded: boolean }) {
                         <div style={{ display: 'flex', alignItems: 'baseline', gap: '1.1rem' }}>
                           <span style={{
                             fontFamily: 'var(--font-body)',
-                            fontSize: '0.6rem',
+                            fontSize: '1rem',
                             letterSpacing: '0.22em',
                             color: hoveredLink === i ? 'var(--accent)' : 'var(--text-dim)',
                             transition: 'color 0.3s',
@@ -271,7 +271,7 @@ export default function Navbar({ isLoaded }: { isLoaded: boolean }) {
                           </span>
                           <span style={{
                             fontFamily: 'var(--font-display)',
-                            fontSize: 'clamp(2.2rem, 5vw, 3.5rem)',
+                            fontSize: 'clamp(3rem, 5vw, 3.5rem)',
                             fontWeight: 400,
                             letterSpacing: '-0.025em',
                             lineHeight: 1.08,
