@@ -70,7 +70,7 @@ const SCROLL_IMGS = [
 const STATS = [
   { num: '2021', label: 'Founded' },
   { num: '60+',  label: 'Projects' },
-  { num: '3',    label: 'Countries' },
+  { num: '4',    label: 'Countries' },
   { num: '100%', label: 'Retention' },
 ];
 
@@ -199,7 +199,7 @@ function TiltCard({ svc, tall = false }: { svc: ServiceDef; tall?: boolean }) {
           Schedio · {svc.num}
         </p>
         {/* Title */}
-        <h3 style={{
+        <p style={{
           fontFamily: 'var(--font-display)',
           fontStyle: 'italic',
           fontSize: 'clamp(1.6rem, 2.8vw, 2.75rem)',
@@ -212,7 +212,7 @@ function TiltCard({ svc, tall = false }: { svc: ServiceDef; tall?: boolean }) {
           transition: 'transform 0.4s cubic-bezier(0.16,1,0.3,1)',
         }}>
           {svc.title}
-        </h3>
+        </p>
         {/* Description */}
         <p style={{
           fontFamily: 'var(--font-body)',
@@ -269,7 +269,7 @@ export default function AboutPage() {
           >
             <Image
               src="/images/showcase/img-07.png"
-              alt=""
+              alt="Schedio studio workspace — design and craft"
               fill
               priority
               style={{ objectFit: 'cover', filter: 'brightness(0.5) saturate(0.75)' }}
@@ -444,9 +444,9 @@ export default function AboutPage() {
               ].map((col) => (
                 <ScrollReveal key={col.h} delay={0.08}>
                   <div style={{ borderTop: '1px solid var(--border)', paddingTop: '1rem' }}>
-                    <h3 style={{ fontFamily: 'var(--font-body)', fontSize: '0.6rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: '0.65rem' }}>
+                    <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.6rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: '0.65rem' }}>
                       {col.h}
-                    </h3>
+                    </p>
                     <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.88rem', lineHeight: 1.7, color: 'var(--text-muted)' }}>
                       {col.t}
                     </p>
@@ -466,7 +466,7 @@ export default function AboutPage() {
         >
           {/* Header */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.25rem', marginBottom: 'clamp(3rem, 6vw, 5rem)' }}>
-            <ScrollReveal><p className="text-label">What We Do — 02</p></ScrollReveal>
+            <ScrollReveal><h2 className="text-label">What We Do — 02</h2></ScrollReveal>
             <div style={{ flex: 1, height: 1, background: 'var(--border)' }} />
             <ScrollReveal delay={0.05}><p className="text-label" style={{ color: 'var(--text-dim)' }}>04 services</p></ScrollReveal>
           </div>

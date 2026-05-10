@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
@@ -184,6 +185,39 @@ export default function ContactPage() {
             padding: 'clamp(7rem, 10vw, 12rem) clamp(1.25rem, 4vw, 3rem) clamp(4rem, 7vw, 6rem)',
           }}
         >
+          {/* Floating image — desktop right */}
+          <motion.div
+            initial={{ opacity: 0, scale: 1.06, x: 40 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 1.3, ease }}
+            style={{
+              position: 'absolute',
+              top: 0, right: 0,
+              width: '50%',
+              height: '75%',
+              overflow: 'hidden',
+            }}
+            className="hidden lg:block"
+          >
+            <Image
+              src="/images/showcase/img-08.png"
+              alt="Schedio studio Mumbai — get in touch to start your project"
+              fill
+              priority
+              style={{ objectFit: 'cover', filter: 'brightness(0.45) saturate(0.7)' }}
+            />
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to left, transparent 35%, var(--bg) 100%)' }} />
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, var(--bg) 0%, transparent 35%)' }} />
+            <div style={{ position: 'absolute', bottom: '2.5rem', right: '2rem', textAlign: 'right' }}>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.6rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: '0.3rem' }}>
+                Mumbai · India
+              </p>
+              <p style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: '1rem', color: 'var(--text-muted)' }}>
+                Available now
+              </p>
+            </div>
+          </motion.div>
+
           {/* Watermark */}
           {/* <span
             aria-hidden

@@ -83,6 +83,42 @@ export default function ServicesPage() {
             borderBottom: '1px solid var(--border)',
           }}
         >
+          {/* Floating image — desktop right */}
+          <motion.div
+            initial={{ opacity: 0, scale: 1.06, x: 40 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 1.3, ease }}
+            style={{
+              position: 'absolute',
+              top: 0, right: 0,
+              width: '50%',
+              height: '75%',
+              overflow: 'hidden',
+            }}
+            className="hidden lg:block"
+          >
+            <Image
+              src="/images/showcase/img-06.png"
+              alt="Schedio design and development services — brand, web, build"
+              fill
+              priority
+              style={{ objectFit: 'cover', filter: 'brightness(0.45) saturate(0.7)' }}
+            />
+            {/* Bleed edges into bg */}
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to left, transparent 35%, var(--bg) 100%)' }} />
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, var(--bg) 0%, transparent 35%)' }} />
+
+            {/* Floating label on image */}
+            <div style={{ position: 'absolute', bottom: '2.5rem', right: '2rem', textAlign: 'right' }}>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.6rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: '0.3rem' }}>
+                04 disciplines
+              </p>
+              <p style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: '1rem', color: 'var(--text-muted)' }}>
+                Design · Build · Launch
+              </p>
+            </div>
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
@@ -168,7 +204,7 @@ export default function ServicesPage() {
               borderBottom: '1px solid var(--border)',
             }}
           >
-            <ScrollReveal><p className="text-label">What we do — 01</p></ScrollReveal>
+            <ScrollReveal><h2 className="text-label">What we do — 01</h2></ScrollReveal>
             <div style={{ flex: 1, height: 1, background: 'var(--border)' }} />
             <ScrollReveal delay={0.05}><p className="text-label" style={{ color: 'var(--text-dim)' }}>{String(SERVICES.length).padStart(2, '0')} disciplines</p></ScrollReveal>
           </div>

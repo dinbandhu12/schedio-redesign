@@ -5,8 +5,15 @@ import Footer from '@/components/layout/Footer';
 import { getAllPosts, formatDate, type PostMeta } from '@/lib/blog';
 
 export const metadata = {
-  title: 'Blog — Schedio',
+  title: 'Blog',
   description: 'Thoughts on branding, interface design, and the craft of building for screen.',
+  alternates: {
+    canonical: 'https://schedio.studio/blog',
+  },
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function BlogPage() {
@@ -24,6 +31,7 @@ export default function BlogPage() {
           className="hero-full"
           style={{
             overflow: 'hidden',
+            position: 'relative',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
@@ -31,6 +39,23 @@ export default function BlogPage() {
             padding: 'clamp(7rem, 10vw, 10rem) clamp(1.25rem, 4vw, 3rem) clamp(4rem, 6vw, 5rem)',
           }}
         >
+          {/* Floating image — desktop right */}
+          <div
+            className="hidden lg:block"
+            style={{ position: 'absolute', top: 0, right: 0, width: '50%', height: '75%', overflow: 'hidden' }}
+          >
+            <Image src="/images/showcase/img-12.png" alt="Schedio journal — design, craft, and code insights" fill priority style={{ objectFit: 'cover', filter: 'brightness(0.45) saturate(0.7)' }} />
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to left, transparent 35%, var(--bg) 100%)' }} />
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, var(--bg) 0%, transparent 35%)' }} />
+            <div style={{ position: 'absolute', bottom: '2.5rem', right: '2rem', textAlign: 'right' }}>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.6rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: '0.3rem' }}>
+                Journal
+              </p>
+              <p style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: '1rem', color: 'var(--text-muted)' }}>
+                Design · Craft · Code
+              </p>
+            </div>
+          </div>
           {/* <span
             aria-hidden
             style={{

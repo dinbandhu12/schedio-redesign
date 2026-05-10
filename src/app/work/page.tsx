@@ -41,6 +41,7 @@ interface Project {
   img: string;
   ratio: string;
   offset: number;
+  csReady?: boolean;
   cs: CaseStudy;
 }
 
@@ -52,258 +53,105 @@ const PROJECTS: Project[] = [
     client: 'Lora Hayes',
     title: 'Personal Portfolio',
     category: 'UI/UX',
-    tags: ['UI Design', 'Web'],
+    tags: ['UI Design', 'Web', 'Branding'],
     year: '2024',
     img: '/images/showcase/c7-2.jpg',
     ratio: '4/5',
     offset: 0,
+    csReady: true,
     cs: {
-      role: 'UI Design · Frontend',
+      role: 'UI Design · Branding · Frontend',
       duration: '6 weeks',
       tools: ['Figma', 'Next.js', 'Framer Motion'],
-      brief: 'Lora needed a portfolio that matched her own creative standard — considered, quiet, and entirely her own. Not a template. A space that earns attention rather than demands it.',
+      brief: 'Lora Hayes is a versatile professional with expertise in design, digital marketing, and content creation. She needed a personal portfolio and a logo mark that authentically embodied her unique identity — not a template someone filled in, but a digital home built around her.',
       problem: {
-        heading: 'The noise problem',
-        body: 'Creative portfolios are saturated. Most compete on visual loudness — the loudest grid, the most transitions, the most saturated colours. Lora\'s work is the opposite: restrained, editorial, precise. The site needed to reflect that. Anything that didn\'t serve the work had to go.',
+        heading: 'Identity without a home',
+        body: 'Lora had the skills, the client work, and the reputation — but no visual home base to show for it. Her challenge was two-fold: a personal website that matched her own creative standard, and a logo that felt genuinely hers rather than borrowed. Most portfolio builders offer layouts. She needed an identity. Every generic template she\'d tried felt like wearing someone else\'s clothes.',
       },
       process: {
-        heading: 'Designing for restraint',
-        body: 'We started by removing — stripping back to what every portfolio actually needs: work, context, contact. Navigation was hidden until needed. The type palette was reduced to two weights of a single serif. Transitions were slowed down deliberately to feel considered rather than performative. Every scroll-driven reveal was designed to give work more room, not to show off.',
-        image: '/images/showcase/img-07.png',
+        heading: 'Logo first, site second',
+        body: 'We started with the mark — exploring five distinct logo directions before landing on one that balanced her design sensibility with professional clarity. From there, the website followed naturally: typography, layout rhythm, and interaction pacing all derived from the identity rather than imposed on top of it. The result is a site where every detail — the kerning, the transitions, the spacing — feels deliberate and unmistakably hers.',
+        image: '/images/casestudy/lora-hayes/website-home.png',
       },
       typography: {
         primary: { name: 'Playfair Display', weights: '400, 500 Italic', usage: 'Headlines, project titles, pull quotes' },
         secondary: { name: 'Inter', weights: '300, 400', usage: 'Body text, metadata, labels' },
       },
       palette: [
-        { name: 'Ink', hex: '#0D0C0B', role: 'Page background' },
-        { name: 'Parchment', hex: '#EDE8DF', role: 'Primary text' },
-        { name: 'Dust', hex: '#7A746C', role: 'Secondary text' },
-        { name: 'Warm White', hex: '#F7F4EF', role: 'Surface highlights' },
+        { name: 'Ink',        hex: '#0D0C0B', role: 'Page background' },
+        { name: 'Parchment',  hex: '#EDE8DF', role: 'Primary text' },
+        { name: 'Dust',       hex: '#7A746C', role: 'Secondary / body text' },
+        { name: 'Warm White', hex: '#F7F4EF', role: 'Surface & highlights' },
       ],
-      gallery: ['/images/showcase/img-08.png', '/images/showcase/mockup-1.png'],
+      gallery: [
+        '/images/casestudy/lora-hayes/mockup-1.png',
+        '/images/casestudy/lora-hayes/mockup-2.png',
+        '/images/casestudy/lora-hayes/mockup-3.png',
+        '/images/casestudy/lora-hayes/blog-img.png',
+      ],
       stats: [
-        { num: '3×', label: 'Avg. session time vs. previous site' },
-        { num: '3', label: 'Client enquiries in first week' },
-        { num: '98', label: 'Lighthouse performance score' },
+        { num: '3×',  label: 'Avg. session time vs. previous site' },
+        { num: '3',   label: 'New client enquiries in first week' },
+        { num: '98',  label: 'Lighthouse performance score' },
       ],
       testimonial: {
-        quote: 'Schedio understood immediately what I couldn\'t articulate. The site feels like mine — not like a template someone filled in.',
+        quote: 'Working with this team has been a game-changer. Their strategic insights and technical expertise helped us create something I\'m genuinely proud to put my name on.',
         author: 'Lora Hayes',
-        title: 'Creative Director, NYC',
+        title: 'Creator & Business Owner',
       },
     },
   },
   {
     num: '02',
     client: 'Shree Ganesh',
-    title: 'Industrial Identity',
+    title: 'Brand & Website',
     category: 'Branding',
-    tags: ['Logo', 'Brand System'],
+    tags: ['Logo', 'Brand System', 'Web'],
     year: '2024',
     img: '/images/showcase/c2.png',
     ratio: '3/4',
     offset: 60,
+    csReady: true,
     cs: {
-      role: 'Brand Identity · Guidelines',
+      role: 'Brand Identity · Web Development',
       duration: '10 weeks',
-      tools: ['Figma', 'Illustrator', 'InDesign'],
-      brief: 'Shree Ganesh had 30 years of operational trust and zero brand recognition beyond existing clients. Entering new enterprise markets required a visual identity that could carry that heritage into boardrooms.',
+      tools: ['Figma', 'Illustrator', 'Next.js'],
+      brief: 'A precision metal fabrication company with the craft to back it up but no digital presence to show for it. They needed a brand and website that could open doors their work alone couldn\'t.',
       problem: {
-        heading: 'Heritage without stagnation',
-        body: 'Legacy industrial brands often default to two failing archetypes: the dusty heritage mark that signals tradition but not competence, or the hollow "we modernised" rebrand that strips all equity. The challenge was to find the third path — a mark rooted in the company\'s actual story, refined enough for the markets they wanted to reach.',
+        heading: 'Craft without a platform',
+        body: 'Shree Ganesh had the technical skill and a growing reputation but no digital presence to back it up. Potential clients couldn\'t find them online, and when they did, there was nothing to show. The objective was clear: create a comprehensive digital presence that effectively communicates their fabrication expertise, attracts new clients, and establishes them as a trusted industry leader through modern design and a user-friendly interface.',
       },
       process: {
-        heading: 'From factory floor to brand mark',
-        body: 'Research started on-site — understanding the manufacturing process, the precision it required, the pride the team took in tolerances most clients never see. The mark emerged from geometric forms referencing both sacred geometry (rooted in the company name) and the precision engineering grids used on the factory floor. A secondary typographic system introduced clarity and structure the brand had previously lacked.',
-        image: '/images/showcase/img-05.png',
+        heading: 'Industrial design meets digital clarity',
+        body: 'We developed a modern, responsive website with an industrial-inspired design that highlights their work through high-quality imagery and intuitive navigation. The solution included a custom logo design, comprehensive branding guidelines, and a user-friendly interface that makes it easy for potential clients to explore services and request quotes. The brand system mark, colour, and type was designed to feel authoritative in a tender document as much as on a site.',
+        image: '/images/casestudy/shree-ganesh/img-1.png',
       },
       typography: {
         primary: { name: 'Söhne', weights: '400, 600', usage: 'Wordmark, headings, product labels' },
         secondary: { name: 'Garamond Premier', weights: '400 Italic', usage: 'Tagline, formal documents' },
       },
       palette: [
-        { name: 'Forge', hex: '#1A1F2E', role: 'Primary — authority, depth' },
+        { name: 'Forge',     hex: '#1A1F2E', role: 'Primary — authority, depth' },
         { name: 'Burnished', hex: '#C9A96E', role: 'Accent — precision, value' },
-        { name: 'Iron', hex: '#8C8C8C', role: 'Supporting neutral' },
-        { name: 'Smoke', hex: '#F2F0EC', role: 'Background, print' },
+        { name: 'Iron',      hex: '#8C8C8C', role: 'Supporting neutral' },
+        { name: 'Smoke',     hex: '#F2F0EC', role: 'Background, print' },
       ],
-      gallery: ['/images/showcase/img-06.png', '/images/showcase/branding.png'],
-      stats: [
-        { num: '4', label: 'Enterprise RFPs won in Q1 post-launch' },
-        { num: '12', label: 'Brand touchpoints unified' },
-        { num: '30+', label: 'Years of heritage preserved' },
+      gallery: [
+        '/images/casestudy/shree-ganesh/img-4.jpg',
+        '/images/casestudy/shree-ganesh/img-2.png',
+        '/images/casestudy/shree-ganesh/img-5.png',
+        '/images/casestudy/shree-ganesh/img-3.jpeg',
       ],
-    },
-  },
-  {
-    num: '03',
-    client: 'Dream Destination',
-    title: 'Travel Platform',
-    category: 'Web',
-    tags: ['UX', 'Product Design'],
-    year: '2024',
-    img: '/images/showcase/c3.png',
-    ratio: '5/6',
-    offset: 0,
-    cs: {
-      role: 'UX Strategy · UI Design · Prototype',
-      duration: '14 weeks',
-      tools: ['Figma', 'Maze', 'Next.js'],
-      brief: 'Dream Destination wanted to compete in the luxury travel space without acting like an aggregator. The goal: feel like a concierge service, work like a modern product.',
-      problem: {
-        heading: 'The aggregator trap',
-        body: 'Every major travel platform optimises for search. Filters, grids, sorting by price — the entire paradigm assumes the user knows exactly where they want to go. Luxury travellers are different. They want to be moved, surprised, guided. No existing platform served that intent. The UX problem was: how do you replace search-first with discovery-first without confusing users or slowing them down?',
-      },
-      process: {
-        heading: 'Magazine logic, product speed',
-        body: 'We mapped the discovery journey of how a well-travelled person actually chooses a destination — conversations, editorial features, a friend\'s recommendation. Then we built that logic into the product. The home experience leads with curated editorial sections. Destinations are presented with context — best season, who it\'s for, what it feels like — before any pricing appears. Filtering is available, but it\'s never the first thing you see.',
-        image: '/images/showcase/img-09.png',
-      },
-      gallery: ['/images/showcase/img-10.png', '/images/showcase/img-11.png'],
       stats: [
-        { num: '3×', label: 'Session duration vs. industry benchmark' },
-        { num: '+28%', label: 'Conversion in A/B testing' },
-        { num: '4.8', label: 'Beta user satisfaction score / 5' },
+        { num: '1st',  label: 'Professional digital presence for the brand' },
+        { num: '10wk', label: 'Brand + site delivered end-to-end' },
+        { num: '100%', label: 'Custom — no templates used' },
       ],
       testimonial: {
-        quote: 'The team fundamentally rethought how a travel product should feel. The result isn\'t a booking engine — it\'s a destination in itself.',
-        author: 'Priya Nair',
-        title: 'CPO, Dream Destination',
+        quote: 'We finally have something we can send to clients before a meeting. The brand feels serious. It matches the quality of work we actually do.',
+        author: 'Shree Ganesh Fabrication',
+        title: 'Metal Fabrication, Mumbai',
       },
-    },
-  },
-  {
-    num: '04',
-    client: 'Innovative Designs',
-    title: 'Identity Refresh',
-    category: 'Branding',
-    tags: ['Brand', 'Guidelines'],
-    year: '2023',
-    img: '/images/showcase/c4.png',
-    ratio: '3/4',
-    offset: 60,
-    cs: {
-      role: 'Brand Strategy · Visual Identity · Guidelines',
-      duration: '8 weeks',
-      tools: ['Figma', 'Illustrator', 'Notion'],
-      brief: 'Innovative Designs had built a strong creative reputation on the strength of their work. Their brand identity had never kept pace. Enterprise clients were walking in the door and seeing a brand that told a different story.',
-      problem: {
-        heading: 'The credibility gap',
-        body: 'There\'s a specific problem that hits mid-sized creative studios: the work outgrows the brand. Innovative Designs was winning projects on reputation and referral, but losing enterprise pitches at the credentials stage. The brand signalled "boutique" when the work delivered "agency". The gap was costing them revenue.',
-      },
-      process: {
-        heading: 'Refinement, not reinvention',
-        body: 'The instinct is to rebuild from scratch. We pushed back. Equity had been built in the existing mark — recognition, muscle memory, associations. Instead, we refined: tightened the geometry of the mark, removed redundant elements, introduced a rigorous typographic system, and built a proper guidelines document the internal team could own and operate without us.',
-        image: '/images/showcase/design.png',
-      },
-      typography: {
-        primary: { name: 'Neue Haas Grotesk', weights: '400, 500, 700', usage: 'All UI, headings, brand communications' },
-        secondary: { name: 'Cormorant Garamond', weights: '400, 600 Italic', usage: 'Pull quotes, editorial contexts' },
-      },
-      palette: [
-        { name: 'Obsidian', hex: '#111111', role: 'Primary — credibility, focus' },
-        { name: 'Signal', hex: '#E8410A', role: 'Accent — energy, distinctiveness' },
-        { name: 'Stone', hex: '#ABABAB', role: 'Supporting neutral' },
-        { name: 'Paper', hex: '#F9F7F4', role: 'Background' },
-      ],
-      gallery: ['/images/showcase/img-12.png', '/images/showcase/mockup-1.png'],
-      stats: [
-        { num: '2', label: 'Enterprise retainers secured in 90 days' },
-        { num: '40%', label: 'Increase in average project value' },
-        { num: '1', label: 'Guidelines doc the team actually uses' },
-      ],
-    },
-  },
-  {
-    num: '05',
-    client: 'Horizon',
-    title: 'SaaS Interface',
-    category: 'Product',
-    tags: ['UI', 'Design System'],
-    year: '2023',
-    img: '/images/showcase/c5.png',
-    ratio: '4/5',
-    offset: 0,
-    cs: {
-      role: 'Product Design · Design System',
-      duration: '16 weeks',
-      tools: ['Figma', 'Storybook', 'React'],
-      brief: 'Horizon had scaled from 3 to 40 engineers in 18 months. The design hadn\'t scaled with them. The UI was inconsistent across modules, the component library didn\'t exist in a usable form, and new features were taking 3× longer to design than they should.',
-      problem: {
-        heading: 'Design debt at scale',
-        body: 'Without a design system, every new feature is built from scratch. Buttons look slightly different in every module. Spacing is inconsistent. Engineers make design decisions they shouldn\'t have to make. The cost isn\'t visible until it suddenly is — in QA cycles, in onboarding friction, in users who can\'t find what they\'re looking for because every section was designed by a different person.',
-      },
-      process: {
-        heading: 'Audit, define, build',
-        body: 'We started with a full UI audit — cataloguing every unique component across 14 product modules. From 340 distinct elements, we derived a core set of 48 reusable components. Then we built the system: design tokens for colour, spacing, and type; a Figma component library; a Storybook implementation guide; and documentation the team could maintain without us. The goal wasn\'t to design new screens — it was to create the infrastructure for the team to design good screens themselves.',
-        image: '/images/showcase/dashboard.png',
-      },
-      typography: {
-        primary: { name: 'Inter', weights: '400, 500, 600', usage: 'All UI text, data tables, labels' },
-        secondary: { name: 'JetBrains Mono', weights: '400', usage: 'Code snippets, data values, IDs' },
-      },
-      palette: [
-        { name: 'Void', hex: '#0F1117', role: 'App background' },
-        { name: 'Surface', hex: '#1C1E26', role: 'Cards, panels' },
-        { name: 'Iris', hex: '#5C6BC0', role: 'Primary actions' },
-        { name: 'Mint', hex: '#26A69A', role: 'Success states' },
-        { name: 'Ember', hex: '#EF5350', role: 'Error/warning states' },
-      ],
-      gallery: ['/images/showcase/img-07.png', '/images/showcase/c5.png'],
-      stats: [
-        { num: '−40%', label: 'Feature design time after system launch' },
-        { num: '48', label: 'Core components in the system' },
-        { num: '340→48', label: 'Unique elements rationalised' },
-      ],
-      testimonial: {
-        quote: 'The design system changed how our engineering team thinks about UI. It\'s the most leveraged thing we\'ve ever invested in.',
-        author: 'James Park',
-        title: 'CTO, Horizon',
-      },
-    },
-  },
-  {
-    num: '06',
-    client: 'Motif Collective',
-    title: 'Editorial Site',
-    category: 'Web',
-    tags: ['Web', 'CMS'],
-    year: '2023',
-    img: '/images/showcase/c6.png',
-    ratio: '3/4',
-    offset: 60,
-    cs: {
-      role: 'Web Design · Development · CMS',
-      duration: '12 weeks',
-      tools: ['Figma', 'Next.js', 'Sanity CMS'],
-      brief: 'Motif Collective publishes long-form writing on contemporary art and design. Their old site — a generic WordPress theme — actively undermined the quality of the writing. They needed a publishing platform as considered as the work it housed.',
-      problem: {
-        heading: 'When the container contradicts the content',
-        body: 'Long-form editorial depends on trust — readers must believe the publication takes the work seriously. A generic theme signals the opposite. Beyond aesthetics, the old CMS made publishing complex articles painful: images couldn\'t be placed inline, typography was inconsistent, and the editorial team spent more time fighting the CMS than writing. Two problems, one solution.',
-      },
-      process: {
-        heading: 'Editorial-first architecture',
-        body: 'We designed the reading experience first — the optimal conditions for a 3,000-word essay on type design or a photo essay on a sculptor\'s practice. Then we built backwards from that: a custom Sanity schema that gave editors real control over layout (variable columns, full-bleed images, pull quotes, inline captions) without requiring developer involvement. The result is a CMS the editorial team actually enjoys using.',
-        image: '/images/showcase/img-04.png',
-      },
-      typography: {
-        primary: { name: 'Freight Display', weights: '400, 400 Italic', usage: 'Article headlines, section titles' },
-        secondary: { name: 'Freight Text', weights: '400, 400 Italic', usage: 'Body text, reading content' },
-        // tertiary for meta
-      },
-      palette: [
-        { name: 'Warm Black', hex: '#141210', role: 'Primary background' },
-        { name: 'Linen', hex: '#F0EBE3', role: 'Reading surface' },
-        { name: 'Sepia', hex: '#8C7355', role: 'Accent — links, highlights' },
-        { name: 'Graphite', hex: '#5A5550', role: 'Body text on light' },
-      ],
-      gallery: ['/images/showcase/img-06.png', '/images/showcase/img-08.png'],
-      stats: [
-        { num: '−87%', label: 'Time-to-publish per article' },
-        { num: '+60%', label: 'Readership growth in Q1' },
-        { num: '4.2min', label: 'Average reading time (up from 1.8min)' },
-      ],
     },
   },
 ];
@@ -724,8 +572,8 @@ function ProjectCard({
         y: { duration: 0.65, ease, delay: index * 0.06 },
         layout: { duration: 0.55, ease: [0.16, 1, 0.3, 1] },
       }}
-      style={{ marginTop: p.offset, cursor: 'none' }}
-      onClick={() => onSelect(p)}
+      style={{ marginTop: p.offset, cursor: 'none', opacity: p.csReady ? 1 : 0.5 }}
+      onClick={() => p.csReady && onSelect(p)}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -773,7 +621,7 @@ function ArchiveRow({ p, i, onSelect }: { p: Project; i: number; onSelect: (p: P
   const [hovered, setHovered] = useState(false);
   return (
     <ScrollReveal delay={i * 0.04}>
-      <div onClick={() => onSelect(p)} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} style={{ cursor: 'none' }}>
+      <div onClick={() => p.csReady && onSelect(p)} onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)} style={{ cursor: 'none', opacity: p.csReady ? 1 : 0.5 }}>
         <div className="hidden md:grid" style={{ gridTemplateColumns: '4rem 1fr 1fr auto auto', gap: '1.5rem', alignItems: 'center', padding: 'clamp(1.5rem, 2.5vw, 2.25rem) clamp(0.75rem, 1.5vw, 1.25rem)', borderBottom: '1px solid var(--border)', background: hovered ? 'var(--surface-1)' : 'transparent', transition: 'background 0.25s', borderRadius: hovered ? 10 : 0 }}>
           <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.72rem', letterSpacing: '0.2em', color: hovered ? 'var(--accent)' : 'var(--text-dim)', transition: 'color 0.25s' }}>{p.num}</span>
           <span style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 'clamp(1.4rem, 2.4vw, 2.2rem)', fontWeight: 400, letterSpacing: '-0.02em', color: hovered ? 'var(--text)' : 'var(--text-muted)', transition: 'color 0.25s' }}>{p.client}</span>
@@ -830,6 +678,22 @@ export default function WorkPage() {
 
         {/* HERO */}
         <section className="hero-full" style={{ padding: 'clamp(6rem, 10vw, 9rem) clamp(1.25rem, 4vw, 3rem) clamp(3rem, 5vw, 4.5rem)', display: 'flex', flexDirection: 'column', justifyContent: 'center', position: 'relative', overflow: 'hidden', borderBottom: '1px solid var(--border)' }}>
+          {/* Floating image — desktop right */}
+          <motion.div
+            initial={{ opacity: 0, scale: 1.06, x: 40 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ duration: 1.3, ease }}
+            style={{ position: 'absolute', top: 0, right: 0, width: '50%', height: '75%', overflow: 'hidden' }}
+            className="hidden lg:block"
+          >
+            <Image src="/images/showcase/img-04.png" alt="Schedio selected client work — branding, web design, development" fill priority style={{ objectFit: 'cover', filter: 'brightness(0.45) saturate(0.7)' }} />
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to left, transparent 35%, var(--bg) 100%)' }} />
+            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, var(--bg) 0%, transparent 35%)' }} />
+            <div style={{ position: 'absolute', bottom: '2.5rem', right: '2rem', textAlign: 'right' }}>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.6rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: '0.3rem' }}>Selected work</p>
+              <p style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: '1rem', color: 'var(--text-muted)' }}>Est. 2021</p>
+            </div>
+          </motion.div>
           <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.1, ease }} style={{ position: 'absolute', top: 'clamp(5.5rem, 9vw, 7.5rem)', left: 'clamp(1.25rem, 4vw, 3rem)', right: 'clamp(1.25rem, 4vw, 3rem)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <p className="text-label">Work — 03</p>
             <p className="text-label" style={{ color: 'var(--text-dim)' }}>{String(PROJECTS.length).padStart(2, '0')} projects</p>
