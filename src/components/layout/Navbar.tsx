@@ -485,15 +485,15 @@ export default function Navbar({ isLoaded }: { isLoaded: boolean }) {
                 onClick={() => setOpen(false)}
                 style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}
               >
-                <Image src="/images/logo/logo-main.svg" alt="Schedio" width={30} height={30} style={{ objectFit: 'contain' }} />
+                <Image src="/images/logo/logo-main.svg" alt="" width={30} height={30} style={{ objectFit: 'contain' }} />
                 <span style={{
                   fontFamily: 'var(--font-body)',
-                  fontSize: '1.5rem',
+                  fontSize: '1.2rem',
                   fontWeight: 600,
                   letterSpacing: '0.02em',
                   color: 'var(--text)',
                 }}>
-                  Schedio
+                  SCHEDIO
                 </span>
               </Link>
 

@@ -18,7 +18,7 @@ const SOCIALS = [
   { label: 'Behance', handle: 'schedio', href: 'https://behance.net/schedio' },
   { label: 'Twitter / X', handle: '@Schedio_studio', href: 'https://twitter.com/Schedio_studio' },
   { label: 'Dribbble', handle: 'schedio', href: 'https://dribbble.com/schedio' },
-  { label: 'LinkedIn', handle: 'schedio', href: 'https://linkedin.com/company/schedio' },
+  { label: 'LinkedIn', handle: 'dinbandhu-sharma', href: 'https://www.linkedin.com/in/dinbandhu-sharma/' },
 ];
 
 interface FormState {

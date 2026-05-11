@@ -550,6 +550,17 @@ export default function AboutPage() {
                 </p>
               </ScrollReveal>
 
+              <ScrollReveal delay={0.12}>
+                <a
+                  href="https://dbs-portfolio-v2.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ display: 'inline-block', marginBottom: 'clamp(2rem, 4vw, 3rem)', color: 'var(--accent)' }}
+                >
+                  View personal portfolio →
+                </a>
+              </ScrollReveal>
+
               {/* Detail row — mini stat strip */}
               <ScrollReveal delay={0.15}>
                 <div style={{ display: 'flex', gap: 'clamp(2rem, 5vw, 5rem)', borderTop: '1px solid var(--border)', paddingTop: 'clamp(1.25rem, 2.5vw, 2rem)' }}>

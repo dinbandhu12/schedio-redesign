@@ -17,7 +17,7 @@ const SOCIALS = [
   { label: 'Behance',   href: 'https://www.behance.net/tempacc5'          },
   { label: 'Twitter/X', href: 'https://x.com/Schedio_studio'             },
   { label: 'Dribbble',  href: 'https://dribbble.com/schedio-studio'      },
-  { label: 'LinkedIn',  href: '#'                                         },
+  { label: 'LinkedIn',  href: 'https://www.linkedin.com/in/dinbandhu-sharma/' },
 ];
 
 function ColLink({ href, label }: { href: string; label: string }) {
