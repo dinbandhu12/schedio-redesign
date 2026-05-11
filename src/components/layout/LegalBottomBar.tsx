@@ -10,9 +10,9 @@ function HoverLink({ href, children }: { href: string; children: React.ReactNode
   return (
     <Link
       href={href}
-      style={{ fontFamily: 'var(--font-body)', fontSize: '0.72rem', color: 'var(--text-dim)', letterSpacing: '0.05em', transition: 'color 0.2s' }}
-      onMouseEnter={e => ((e.currentTarget as HTMLElement).style.color = 'var(--text-muted)')}
-      onMouseLeave={e => ((e.currentTarget as HTMLElement).style.color = 'var(--text-dim)')}
+      style={{ fontFamily: 'var(--font-body)', fontSize: '0.72rem', color: 'var(--text-muted)', letterSpacing: '0.05em', transition: 'color 0.2s' }}
+      onMouseEnter={e => ((e.currentTarget as HTMLElement).style.color = 'var(--text)')}
+      onMouseLeave={e => ((e.currentTarget as HTMLElement).style.color = 'var(--text-muted)')}
     >
       {children}
     </Link>
@@ -32,9 +32,9 @@ export default function LegalBottomBar({ links }: LegalBottomBarProps) {
     }}>
       <Link
         href="/"
-        style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', fontFamily: 'var(--font-body)', fontSize: '0.72rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text-dim)', transition: 'color 0.2s' }}
-        onMouseEnter={e => ((e.currentTarget as HTMLElement).style.color = 'var(--text-muted)')}
-        onMouseLeave={e => ((e.currentTarget as HTMLElement).style.color = 'var(--text-dim)')}
+        style={{ display: 'inline-flex', alignItems: 'center', gap: '0.6rem', fontFamily: 'var(--font-body)', fontSize: '0.72rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--text-muted)', transition: 'color 0.2s' }}
+        onMouseEnter={e => ((e.currentTarget as HTMLElement).style.color = 'var(--text)')}
+        onMouseLeave={e => ((e.currentTarget as HTMLElement).style.color = 'var(--text-muted)')}
       >
         <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M11 2L2 11M2 11H9M2 11V4" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" /></svg>
         Back to Home
@@ -44,7 +44,7 @@ export default function LegalBottomBar({ links }: LegalBottomBarProps) {
           <HoverLink key={l.label} href={l.href}>{l.label}</HoverLink>
         ))}
       </div>
-      <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.72rem', color: 'var(--text-dim)', letterSpacing: '0.05em' }}>
+      <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.72rem', color: 'var(--text-muted)', letterSpacing: '0.05em' }}>
         © 2026 Schedio
       </span>
     </div>

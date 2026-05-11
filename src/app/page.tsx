@@ -1,22 +1,25 @@
 'use client';
 
 import { useState, useCallback } from 'react';
-import type { Metadata } from 'next';
+import dynamic from 'next/dynamic';
 
 import PageLoader    from '@/components/layout/PageLoader';
 import Navbar        from '@/components/layout/Navbar';
 import Footer        from '@/components/layout/Footer';
 
+// Above-fold: loaded immediately
 import Hero          from '@/components/sections/Hero';
 import MarqueeStrip  from '@/components/sections/MarqueeStrip';
 import About         from '@/components/sections/About';
 import Services      from '@/components/sections/Services';
 import Work          from '@/components/sections/Work';
-import Stats         from '@/components/sections/Stats';
-import Clients       from '@/components/sections/Clients';
-import Testimonials  from '@/components/sections/Testimonials';
-import FAQ           from '@/components/sections/FAQ';
-import CTABanner     from '@/components/sections/CTABanner';
+
+// Below-fold: code-split, loaded as browser becomes idle
+const Stats        = dynamic(() => import('@/components/sections/Stats'));
+const Clients      = dynamic(() => import('@/components/sections/Clients'));
+const Testimonials = dynamic(() => import('@/components/sections/Testimonials'));
+const FAQ          = dynamic(() => import('@/components/sections/FAQ'));
+const CTABanner    = dynamic(() => import('@/components/sections/CTABanner'));
 
 export default function HomePage() {
   const [loaded, setLoaded] = useState(false);

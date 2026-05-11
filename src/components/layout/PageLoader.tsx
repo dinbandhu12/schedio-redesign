@@ -52,8 +52,8 @@ export default function PageLoader({ onComplete }: PageLoaderProps) {
         },
       }, 0);
 
-      // Fade label out
-      tl.to(labelRef.current, { opacity: 0, duration: 0.2 }, '-=0.08');
+      // Fade label + counter out together
+      tl.to([labelRef.current, countRef.current], { opacity: 0, duration: 0.2 }, '-=0.08');
 
       // Curtain split
       tl.to([topRef.current, botRef.current], {
@@ -141,6 +141,7 @@ export default function PageLoader({ onComplete }: PageLoaderProps) {
 
       {/* Counter — bottom right */}
       <div
+        aria-hidden="true"
         style={{
           position: 'absolute',
           bottom: '2rem',

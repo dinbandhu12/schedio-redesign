@@ -108,7 +108,7 @@ export default function Footer() {
           <p
             style={{
               fontSize: '0.82rem',
-              color: 'var(--text-dim)',
+              color: 'var(--text-muted)',
               lineHeight: 1.8,
               marginBottom: '0.85rem',
             }}

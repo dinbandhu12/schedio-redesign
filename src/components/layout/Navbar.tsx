@@ -69,7 +69,7 @@ export default function Navbar({ isLoaded }: { isLoaded: boolean }) {
         <Link href="/" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
           <Image
             src="/images/logo/logo-main.svg"
-            alt="Schedio"
+            alt=""
             width={30}
             height={30}
             onMouseEnter={() => setLogoSpin(true)}

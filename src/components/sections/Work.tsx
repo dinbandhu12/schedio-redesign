@@ -287,6 +287,7 @@ export default function Work() {
                 }}
               >
                 <span
+                  aria-hidden="true"
                   style={{
                     fontFamily: 'var(--font-body)',
                     fontSize: '0.62rem',
@@ -298,6 +299,7 @@ export default function Work() {
                   Case {p.num} / {String(PROJECTS.length).padStart(2, '0')}
                 </span>
                 <span
+                  aria-hidden="true"
                   style={{
                     fontFamily: 'var(--font-display)',
                     fontStyle: 'italic',
