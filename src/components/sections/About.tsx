@@ -206,7 +206,7 @@ export default function About() {
                   fontFamily: 'var(--font-body)',
                 }}
               >
-                We partner with founders who treat detail as a discipline — from
+                We partner with founders who treat detail as a discipline from
                 the first brand mark to the last interaction state.
               </p>
             </ScrollReveal>

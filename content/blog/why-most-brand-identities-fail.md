@@ -1,6 +1,6 @@
 ---
 title: "Why Most Brand Identities Fail Within Three Years"
-excerpt: "A logo is not a brand. Here's what actually makes an identity last — and why so many studios get it wrong from the start."
+excerpt: "A logo is not a brand. Here's what actually makes an identity last and why so many studios get it wrong from the start."
 date: "2024-11-18"
 category: "Branding"
 coverImage: "/images/showcase/img-08.png"
@@ -9,24 +9,24 @@ readTime: "6 min read"
 featured: true
 ---
 
-There is a pattern we see repeatedly. A founder spends weeks agonising over a logo, picks something they love, and launches. Two years later the brand feels off — inconsistent across touchpoints, unconvincing to new clients, quietly embarrassing. So they rebrand. The cycle repeats.
+There is a pattern we see repeatedly. A founder spends weeks agonising over a logo, picks something they love, and launches. Two years later the brand feels off inconsistent across touchpoints, unconvincing to new clients, quietly embarrassing. So they rebrand. The cycle repeats.
 
 The problem is almost never the logo.
 
 ## Identity is a system, not a mark
 
-A brand identity is the sum of every visual and verbal decision a company makes — typography, colour, photography style, tone of voice, layout language, motion behaviour. The logo is one small piece of that system. When it is treated as the whole thing, everything downstream suffers.
+A brand identity is the sum of every visual and verbal decision a company makes typography, colour, photography style, tone of voice, layout language, motion behaviour. The logo is one small piece of that system. When it is treated as the whole thing, everything downstream suffers.
 
-A mark without a system means every designer who touches the brand makes decisions from scratch. The result is visual noise: twelve different shades of "brand blue" across a deck, a website, and a brochure — none of them matching.
+A mark without a system means every designer who touches the brand makes decisions from scratch. The result is visual noise: twelve different shades of "brand blue" across a deck, a website, and a brochure none of them matching.
 
 ## The brief problem
 
-Most failed identities begin with a bad brief. Not a brief that lacks information, but one that lacks honesty. Founders describe the company they aspire to be rather than the one they are. The resulting identity fits neither version — too ambitious to feel genuine, too generic to be memorable.
+Most failed identities begin with a bad brief. Not a brief that lacks information, but one that lacks honesty. Founders describe the company they aspire to be rather than the one they are. The resulting identity fits neither version too ambitious to feel genuine, too generic to be memorable.
 
 A brief should answer three things with uncomfortable specificity:
 
-1. **Who are we actually competing with?** Not aspirationally — actually.
-2. **What do we want people to feel in the first five seconds?** Not think — feel.
+1. **Who are we actually competing with?** Not aspirationally actually.
+2. **What do we want people to feel in the first five seconds?** Not think feel.
 3. **What does success look like in three years?** And does this identity travel there?
 
 ## The execution gap
@@ -41,7 +41,7 @@ Identities that last a decade tend to share three properties:
 
 **Restraint.** They do not try to say everything. They pick one or two things to do exceptionally well and leave room for the brand to breathe and evolve.
 
-**System thinking.** Every element — mark, type, colour, space — is defined in relationship to every other element, not in isolation.
+**System thinking.** Every element mark, type, colour, space is defined in relationship to every other element, not in isolation.
 
 **Honest foundations.** The identity reflects what the company genuinely is. Not what it wants to be in five years. Not what a competitor is doing well. What it actually does, for whom, and why that matters.
 

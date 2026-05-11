@@ -63,14 +63,14 @@ const PROJECTS: Project[] = [
       role: 'UI Design · Branding · Frontend',
       duration: '6 weeks',
       tools: ['Figma', 'Next.js', 'Framer Motion'],
-      brief: 'Lora Hayes is a versatile professional with expertise in design, digital marketing, and content creation. She needed a personal portfolio and a logo mark that authentically embodied her unique identity — not a template someone filled in, but a digital home built around her.',
+      brief: 'Lora Hayes is a versatile professional with expertise in design, digital marketing, and content creation. She needed a personal portfolio and a logo mark that authentically embodied her unique identity not a template someone filled in, but a digital home built around her.',
       problem: {
         heading: 'Identity without a home',
-        body: 'Lora had the skills, the client work, and the reputation — but no visual home base to show for it. Her challenge was two-fold: a personal website that matched her own creative standard, and a logo that felt genuinely hers rather than borrowed. Most portfolio builders offer layouts. She needed an identity. Every generic template she\'d tried felt like wearing someone else\'s clothes.',
+        body: 'Lora had the skills, the client work, and the reputation but no visual home base to show for it. Her challenge was two-fold: a personal website that matched her own creative standard, and a logo that felt genuinely hers rather than borrowed. Most portfolio builders offer layouts. She needed an identity. Every generic template she\'d tried felt like wearing someone else\'s clothes.',
       },
       process: {
         heading: 'Logo first, site second',
-        body: 'We started with the mark — exploring five distinct logo directions before landing on one that balanced her design sensibility with professional clarity. From there, the website followed naturally: typography, layout rhythm, and interaction pacing all derived from the identity rather than imposed on top of it. The result is a site where every detail — the kerning, the transitions, the spacing — feels deliberate and unmistakably hers.',
+        body: 'We started with the mark exploring five distinct logo directions before landing on one that balanced her design sensibility with professional clarity. From there, the website followed naturally: typography, layout rhythm, and interaction pacing all derived from the identity rather than imposed on top of it. The result is a site where every detail the kerning, the transitions, the spacing feels deliberate and unmistakably hers.',
         image: '/images/casestudy/lora-hayes/website-home.png',
       },
       typography: {
@@ -698,7 +698,7 @@ export default function WorkPage() {
             <p className="text-label">Work — 03</p>
             <p className="text-label" style={{ color: 'var(--text-dim)' }}>{String(PROJECTS.length).padStart(2, '0')} projects</p>
           </motion.div>
-          <span aria-hidden style={{ position: 'absolute', bottom: '-0.1em', right: '-0.04em', fontFamily: 'var(--font-display)', fontSize: 'clamp(12rem, 35vw, 42rem)', fontWeight: 700, color: 'transparent', WebkitTextStroke: '1px var(--border)', lineHeight: 1, pointerEvents: 'none', userSelect: 'none', letterSpacing: '-0.06em', opacity: 0.5 }}>03</span>
+          {/* <span aria-hidden style={{ position: 'absolute', bottom: '-0.1em', right: '-0.04em', fontFamily: 'var(--font-display)', fontSize: 'clamp(12rem, 35vw, 42rem)', fontWeight: 700, color: 'transparent', WebkitTextStroke: '1px var(--border)', lineHeight: 1, pointerEvents: 'none', userSelect: 'none', letterSpacing: '-0.06em', opacity: 0.5 }}>03</span> */}
           <div style={{ position: 'relative', zIndex: 1 }}>
             <div style={{ overflow: 'hidden' }}>
               <motion.h1 initial={{ y: '105%' }} animate={{ y: 0 }} transition={{ duration: 1.05, delay: 0.2, ease }} style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(3.4rem, 11vw, 12rem)', fontWeight: 400, lineHeight: 0.95, letterSpacing: '-0.04em', color: 'var(--text)', maxWidth: '14ch', paddingBottom: '0.06em' }}>
@@ -706,7 +706,7 @@ export default function WorkPage() {
               </motion.h1>
             </div>
             <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, delay: 0.55, ease }} style={{ display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', flexWrap: 'wrap', gap: '2rem', marginTop: 'clamp(2.5rem, 5vw, 4rem)', paddingTop: 'clamp(2rem, 4vw, 3rem)', borderTop: '1px solid var(--border)' }}>
-              <p style={{ fontFamily: 'var(--font-body)', fontSize: 'clamp(0.9rem, 1.3vw, 1.05rem)', lineHeight: 1.8, color: 'var(--text-muted)', maxWidth: '44ch' }}>A selection of projects across brand identity, interface design, and digital products — each built with the same attention to detail.</p>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: 'clamp(0.9rem, 1.3vw, 1.05rem)', lineHeight: 1.8, color: 'var(--text-muted)', maxWidth: '44ch' }}>A selection of projects across brand identity, interface design, and digital products each built with the same attention to detail.</p>
               <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.65rem', fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 'clamp(1rem, 1.5vw, 1.2rem)', color: 'var(--accent)', flexShrink: 0, transition: 'gap 0.3s' }} onMouseEnter={(e) => (e.currentTarget.style.gap = '1.1rem')} onMouseLeave={(e) => (e.currentTarget.style.gap = '0.65rem')}>
                 Start your project
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 14L14 2M14 2H5M14 2V11" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" /></svg>

@@ -15,7 +15,7 @@ const SERVICES = [
     num: '01',
     title: 'Brand Identity',
     tags: ['Logo Design', 'Visual Systems', 'Guidelines'],
-    desc: 'Your brand is more than a logo — it\'s the feeling people carry after the interaction is over. We build visual identities from first principles: mark, color, type, and motion.',
+    desc: 'Your brand is more than a logo it\'s the feeling people carry after the interaction is over. We build visual identities from first principles: mark, color, type, and motion.',
     deliverables: ['Brand mark & logo suite', 'Color & typography system', 'Brand guidelines document', 'Asset library & templates'],
     img: '/images/showcase/img-05.png',
     bg: '#0e0d0c',
@@ -24,7 +24,7 @@ const SERVICES = [
     num: '02',
     title: 'Web Design',
     tags: ['UI/UX', 'Prototyping', 'Design Systems'],
-    desc: 'Interfaces that communicate before a word is read. Every layout choice, spacing decision, and interaction state is deliberate — not templated. Purpose-built for your context and audience.',
+    desc: 'Interfaces that communicate before a word is read. Every layout choice, spacing decision, and interaction state is deliberate not templated. Purpose-built for your context and audience.',
     deliverables: ['Wireframes & user flows', 'High-fidelity UI design', 'Interactive Figma prototype', 'Design system & component library'],
     img: '/images/showcase/img-07.png',
     bg: '#0f0e0c',
@@ -42,7 +42,7 @@ const SERVICES = [
     num: '04',
     title: 'Motion & Interaction',
     tags: ['Animation', 'Micro-interactions', 'GSAP'],
-    desc: 'The difference between a website and an experience is motion. Purposeful animation — scroll-driven reveals, page transitions, micro-interactions — that makes your product feel alive.',
+    desc: 'The difference between a website and an experience is motion. Purposeful animation scroll-driven reveals, page transitions, micro-interactions that makes your product feel alive.',
     deliverables: ['Interaction design specs', 'GSAP / Framer Motion implementation', 'Page transition system', 'Scroll-driven experiences'],
     img: '/images/showcase/img-18.png',
     bg: '#100f0d',
@@ -52,7 +52,7 @@ const SERVICES = [
 const PROCESS = [
   { num: '01', title: 'Discovery', body: 'We start by listening. Goals, audience, competitive landscape, and what success actually looks like for you.' },
   { num: '02', title: 'Strategy',  body: 'Scope defined. Approach locked. A clear map so both sides know exactly where we\'re headed before a single pixel moves.' },
-  { num: '03', title: 'Design',    body: 'Iteration with intent. Regular check-ins, clear feedback loops, and no surprises — just steady progress toward something great.' },
+  { num: '03', title: 'Design',    body: 'Iteration with intent. Regular check-ins, clear feedback loops, and no surprises just steady progress toward something great.' },
   { num: '04', title: 'Build',     body: 'Code meets design. Staging previews throughout so you can see and test the product as it takes shape.' },
   { num: '05', title: 'Launch',    body: 'Deployment, handoff, and documentation. We stick around after go-live to make sure everything holds.' },
 ];
@@ -672,7 +672,7 @@ export default function ServicesPage() {
             <p className="text-label" style={{ marginBottom: 'clamp(3rem, 6vw, 5rem)' }}>Why Schedio — 03</p>
           </ScrollReveal>
           {[
-            { label: 'No middlemen.', body: 'You speak directly with the people doing the work — no account managers passing notes between floors.' },
+            { label: 'No middlemen.', body: 'You speak directly with the people doing the work no account managers passing notes between floors.' },
             { label: 'Detail as discipline.', body: 'We obsess over the micro-interactions, kerning, and half-pixels most agencies never touch. That\'s where the difference lives.' },
             { label: 'Built to last.', body: 'We don\'t design for the portfolio screenshot. We design for the product that\'s still running and converting two years from now.' },
           ].map((item, i) => (
