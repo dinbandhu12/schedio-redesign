@@ -56,7 +56,7 @@ To exercise any of these rights, email us at info@schedio.studio. We will respon
   },
   {
     title: 'Data Security',
-    body: `We take reasonable technical and organisational measures to protect your personal information against unauthorised access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.`,
+    body: `We take reasonable technical and organizational measures to protect your personal information against unauthorised access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.`,
   },
   {
     title: 'Changes to This Policy',
@@ -100,7 +100,7 @@ export default function PrivacyPolicyPage() {
             Privacy Policy
           </h1>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.78rem', color: 'var(--text-dim)', letterSpacing: '0.05em' }}>
-            Last updated: May 2025
+            Last updated: May 2026
           </p>
         </section>
 

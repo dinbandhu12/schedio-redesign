@@ -346,10 +346,16 @@ export default function Navbar({ isLoaded }: { isLoaded: boolean }) {
                     </a>
                   </div>
                   <div style={{ display: 'flex', gap: '1.25rem', alignItems: 'center' }}>
-                    {['Instagram', 'Behance', 'Dribbble'].map((s) => (
+                    {([
+                      { label: 'Instagram', href: 'https://www.instagram.com/schedio_agency/' },
+                      { label: 'Behance',   href: 'https://www.behance.net/tempacc5'          },
+                      { label: 'Dribbble',  href: 'https://dribbble.com/schedio-studio'       },
+                    ] as const).map((s) => (
                       <a
-                        key={s}
-                        href="#"
+                        key={s.label}
+                        href={s.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         style={{
                           fontFamily: 'var(--font-body)',
                           fontSize: '0.62rem',
@@ -362,7 +368,7 @@ export default function Navbar({ isLoaded }: { isLoaded: boolean }) {
                         onMouseEnter={e => (e.currentTarget.style.color = 'var(--text)')}
                         onMouseLeave={e => (e.currentTarget.style.color = 'var(--text-dim)')}
                       >
-                        {s}
+                        {s.label}
                       </a>
                     ))}
                   </div>

@@ -107,7 +107,7 @@ export default function CookiePolicyPage() {
             Cookie Policy
           </h1>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.78rem', color: 'var(--text-dim)', letterSpacing: '0.05em' }}>
-            Last updated: May 2025
+            Last updated: May 2026
           </p>
         </section>
 

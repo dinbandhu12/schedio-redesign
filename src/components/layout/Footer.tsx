@@ -192,7 +192,11 @@ export default function Footer() {
               overflow: 'hidden',
             }}
           >
+            <label htmlFor="footer-newsletter" className="sr-only">
+              Email address for newsletter
+            </label>
             <input
+              id="footer-newsletter"
               type="email"
               placeholder="your@email.com"
               style={{

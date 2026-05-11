@@ -144,7 +144,7 @@ const PROJECTS: Project[] = [
       ],
       stats: [
         { num: '1st',  label: 'Professional digital presence for the brand' },
-        { num: '10wk', label: 'Brand + site delivered end-to-end' },
+        { num: '10 weeks', label: 'Brand + site delivered end-to-end' },
         { num: '100%', label: 'Custom — no templates used' },
       ],
       testimonial: {

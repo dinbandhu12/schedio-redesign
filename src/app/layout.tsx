@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     description: 'Premium digital experiences for startups and lifestyle brands.',
   },
   icons: {
-    icon: '/images/logo/transparent-logo.png',
+    icon: '/images/logo/logo-main.png',
   },
   robots: {
     index:  true,

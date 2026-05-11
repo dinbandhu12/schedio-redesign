@@ -125,7 +125,7 @@ export default function BlogPage() {
             }}
           >
             Thoughts on branding, interface craft, and the considered
-            decisions that separate good design from great.
+            decisions that separate good design from great design.
           </p>
         </section>
 

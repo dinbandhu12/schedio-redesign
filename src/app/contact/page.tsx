@@ -9,7 +9,7 @@ import ScrollReveal from '@/components/ui/ScrollReveal';
 
 const ease = [0.16, 1, 0.3, 1] as [number, number, number, number];
 
-const PROJECT_TYPES = ['Branding', 'UI / UX', 'Web', 'Product', 'Full scope'] as const;
+const PROJECT_TYPES = ['Branding', 'UI/UX', 'Web', 'Product', 'Full scope'] as const;
 const BUDGETS = ['Under ₹50k', '₹50k – ₹1L', '₹1L – ₹5L', '₹5L+', 'Let\'s discuss'] as const;
 
 const SOCIALS = [
@@ -541,7 +541,7 @@ export default function ContactPage() {
                         id="message"
                         value={form.message}
                         onChange={set('message')}
-                        placeholder="Please explain your project in detailed..."
+                        placeholder="Please explain your project in detail..."
                         required
                       />
                     </ScrollReveal>
@@ -589,7 +589,7 @@ export default function ContactPage() {
             }}
           >
             {[...Array(3)].flatMap((_, rep) =>
-              ['info@schedio.studio', '+91 960 776 9564', 'Mumbai, India', 'Available for projects', 'info@schedio.studio', '+91 960 776 9564', 'Mumbai, India', 'Available for projects'].map((item, i) => (
+              ['info@schedio.studio', '+91 (960) 776-9564', 'Mumbai, India', 'Available for projects', 'info@schedio.studio', '+91 (960) 776-9564', 'Mumbai, India', 'Available for projects'].map((item, i) => (
                 <span
                   key={`${rep}-${i}`}
                   style={{

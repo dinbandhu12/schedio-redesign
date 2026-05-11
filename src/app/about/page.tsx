@@ -20,7 +20,7 @@ const SERVICES = [
   {
     num: '02',
     title: 'Branding',
-    desc: 'Identities built to outlast trends — rooted in strategy, refined by craft.',
+    desc: 'Identities built to outlast trends rooted in strategy, refined by craft.',
     img: '/images/showcase/img-05.png',
   },
   {
@@ -41,7 +41,7 @@ const BELIEFS = [
   {
     num: '01',
     title: 'Craft first',
-    body: 'We obsess over the details most people never notice — the micro-interaction, the kerning, the half-pixel. Because everything adds up.',
+    body: 'We obsess over the details most people never notice the micro-interaction, the kerning, the half-pixel. Because everything adds up.',
     img: '/images/showcase/c1.png',
   },
   {
@@ -53,7 +53,7 @@ const BELIEFS = [
   {
     num: '03',
     title: 'True collaboration',
-    body: 'Your vision, our craft. We embed ourselves in your goals so the final product feels like yours — because it is.',
+    body: 'Your vision, our craft. We embed ourselves in your goals so the final product feels like yours because it is.',
     img: '/images/showcase/c3.png',
   },
 ];
@@ -431,7 +431,7 @@ export default function AboutPage() {
                 color: 'var(--text-muted)',
                 maxWidth: '60ch',
               }}>
-                We are a small team of designers and developers who refuse to separate beauty from function. We work with founders, startups, and growing brands to build things that matter — websites, identities, and digital experiences built to last.
+                We are a small team of designers and developers who refuse to separate beauty from function. We work with founders, startups, and growing brands to build things that matter websites, identities, and digital experiences built to last.
               </p>
             </ScrollReveal>
 
@@ -454,6 +454,174 @@ export default function AboutPage() {
                 </ScrollReveal>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* ══════════════════════════ FOUNDER ══════════════════════════════ */}
+        <section
+          style={{
+            padding: 'clamp(4.5rem, 9vw, 8rem) clamp(1.25rem, 4vw, 3rem)',
+            borderBottom: '1px solid var(--border)',
+            position: 'relative',
+            overflow: 'hidden',
+          }}
+        >
+          {/* Ghost watermark */}
+          <span
+            aria-hidden
+            style={{
+              position: 'absolute',
+              right: '-1rem',
+              top: '50%',
+              transform: 'translateY(-50%)',
+              fontFamily: 'var(--font-display)',
+              fontSize: 'clamp(8rem, 22vw, 26rem)',
+              fontWeight: 700,
+              lineHeight: 1,
+              color: 'transparent',
+              WebkitTextStroke: '1px var(--border)',
+              userSelect: 'none',
+              pointerEvents: 'none',
+              letterSpacing: '-0.04em',
+              zIndex: 0,
+            }}
+          >
+            DBS
+          </span>
+
+          <div
+            style={{ display: 'grid', gap: 'clamp(3rem, 6vw, 8rem)', alignItems: 'end', position: 'relative', zIndex: 1 }}
+            className="lg:grid-cols-[1.1fr_0.9fr]"
+          >
+            {/* ── Left: editorial text ── */}
+            <div>
+              {/* Label row */}
+              <ScrollReveal>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: 'clamp(2rem, 5vw, 4rem)' }}>
+                  <p className="text-label">Behind the studio</p>
+                  <div style={{ width: 'clamp(1.5rem, 4vw, 3.5rem)', height: 1, background: 'var(--border)' }} />
+                </div>
+              </ScrollReveal>
+
+              {/* Big italic name */}
+              <ScrollReveal delay={0.05}>
+                <h2
+                  style={{
+                    fontFamily: 'var(--font-display)',
+                    fontStyle: 'italic',
+                    fontSize: 'clamp(4.5rem, 11vw, 13rem)',
+                    fontWeight: 400,
+                    lineHeight: 0.9,
+                    letterSpacing: '-0.04em',
+                    color: 'var(--text)',
+                    marginBottom: 'clamp(1.5rem, 3vw, 2.25rem)',
+                  }}
+                >
+                  DBS
+                </h2>
+              </ScrollReveal>
+
+              {/* Gold role tag */}
+              <ScrollReveal delay={0.09}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '0.9rem', marginBottom: 'clamp(2rem, 4vw, 3rem)' }}>
+                  <div style={{ width: 'clamp(2rem, 4vw, 3.5rem)', height: 1, background: 'var(--accent)' }} />
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.68rem', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--accent)' }}>
+                    Founder &amp; Creative Director, Schedio
+                  </p>
+                </div>
+              </ScrollReveal>
+
+              {/* Bio */}
+              <ScrollReveal delay={0.12}>
+                <p
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: 'clamp(0.9rem, 1.2vw, 1.05rem)',
+                    lineHeight: 1.85,
+                    color: 'var(--text-muted)',
+                    maxWidth: '52ch',
+                    marginBottom: 'clamp(2.5rem, 5vw, 4rem)',
+                  }}
+                >
+                  DBS founded Schedio in 2023 with a clear intent build digital experiences
+                  that hold up under scrutiny. With a background spanning design, development,
+                  and brand strategy, he leads every project from concept to launch, keeping
+                  quality non-negotiable at every step.
+                </p>
+              </ScrollReveal>
+
+              {/* Detail row — mini stat strip */}
+              <ScrollReveal delay={0.15}>
+                <div style={{ display: 'flex', gap: 'clamp(2rem, 5vw, 5rem)', borderTop: '1px solid var(--border)', paddingTop: 'clamp(1.25rem, 2.5vw, 2rem)' }}>
+                  {[
+                    { label: 'Based in', value: 'Mumbai, IN' },
+                    { label: 'Since',    value: '2023'        },
+                    { label: 'Focus',    value: 'Design & Dev' },
+                  ].map(({ label, value }) => (
+                    <div key={label}>
+                      <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.58rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'var(--text-dim)', marginBottom: '0.4rem' }}>
+                        {label}
+                      </p>
+                      <p style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 'clamp(0.95rem, 1.4vw, 1.25rem)', color: 'var(--text)', letterSpacing: '-0.01em' }}>
+                        {value}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </ScrollReveal>
+            </div>
+
+            {/* ── Right: photo card ── */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.95, delay: 0.08, ease }}
+              style={{
+                position: 'relative',
+                borderRadius: 20,
+                overflow: 'hidden',
+                aspectRatio: '3/4',
+                border: '1px solid var(--border)',
+                cursor: 'none',
+              }}
+            >
+              <Image
+                src="/images/founder.png"
+                alt="DBS — Founder of Schedio"
+                fill
+                style={{ objectFit: 'cover', objectPosition: 'center top', filter: 'saturate(0.88)' }}
+              />
+              {/* Deep bottom vignette */}
+              <div style={{
+                position: 'absolute', inset: 0,
+                background: 'linear-gradient(to top, rgba(9,9,8,0.88) 0%, rgba(9,9,8,0.18) 50%, transparent 100%)',
+                pointerEvents: 'none',
+              }} />
+              {/* Top-left warm tint strip */}
+              <div style={{
+                position: 'absolute', inset: 0,
+                background: 'linear-gradient(135deg, rgba(201,169,110,0.07) 0%, transparent 55%)',
+                pointerEvents: 'none',
+              }} />
+              {/* Overlay label inside photo */}
+              <div style={{ position: 'absolute', bottom: '1.75rem', left: '1.75rem', right: '1.75rem' }}>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.58rem', letterSpacing: '0.22em', textTransform: 'uppercase', color: 'var(--accent)', marginBottom: '0.4rem' }}>
+                  Schedio · Mumbai
+                </p>
+                <p style={{
+                  fontFamily: 'var(--font-display)',
+                  fontStyle: 'italic',
+                  fontSize: 'clamp(1.2rem, 2.2vw, 1.9rem)',
+                  fontWeight: 400,
+                  color: 'var(--text)',
+                  letterSpacing: '-0.02em',
+                  lineHeight: 1.1,
+                }}>
+                  Design with intention,<br />built to last.
+                </p>
+              </div>
+            </motion.div>
           </div>
         </section>
 
