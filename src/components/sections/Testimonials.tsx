@@ -150,7 +150,7 @@ function QuoteCard({ t }: { t: Testimonial }) {
         >
           <Image
             src={t.photo}
-            alt={t.name}
+            alt=""
             fill
             sizes="40px"
             style={{ objectFit: 'cover' }}
@@ -319,7 +319,7 @@ export default function Testimonials() {
             >
               <Image
                 src={FEATURED.photo}
-                alt={FEATURED.name}
+                alt=""
                 fill
                 sizes="120px"
                 style={{ objectFit: 'cover' }}

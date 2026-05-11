@@ -186,8 +186,9 @@ export default function FAQ() {
                   e.currentTarget.style.background = 'transparent';
                 }}
               >
-                {/* Index number */}
+                {/* Index number — decorative */}
                 <span
+                  aria-hidden="true"
                   style={{
                     fontFamily: 'var(--font-body)',
                     fontSize: '0.7rem',

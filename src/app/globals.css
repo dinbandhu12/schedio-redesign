@@ -13,11 +13,9 @@
   --accent-light:#e8cfa0;
   --accent-dim:  #8a6e3e;
 
-  --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
-  --font-lora:    'Lora', Georgia, serif;
-  --font-body:    'Inter', system-ui, sans-serif;
+  /* --font-display / --font-body / --font-lora set by next/font on <html> */
 
-  --section-pad: clamp(5rem, 10vw, 9rem);
+--section-pad: clamp(5rem, 10vw, 9rem);
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out:   cubic-bezier(0.76, 0, 0.24, 1);
 }

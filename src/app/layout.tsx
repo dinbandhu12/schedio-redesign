@@ -1,8 +1,30 @@
 import type { Metadata } from 'next';
+import { Bricolage_Grotesque, Inter, Lora } from 'next/font/google';
 import './globals.css';
 import SmoothScrollProvider from '@/components/layout/SmoothScrollProvider';
 import CustomCursor         from '@/components/layout/CustomCursor';
 import TransitionProvider   from '@/components/layout/TransitionProvider';
+
+const displayFont = Bricolage_Grotesque({
+  subsets: ['latin'],
+  variable: '--font-display',
+  display: 'swap',
+});
+
+const bodyFont = Inter({
+  subsets: ['latin'],
+  variable: '--font-body',
+  display: 'swap',
+  weight: ['300', '400', '500', '600'],
+});
+
+const loraFont = Lora({
+  subsets: ['latin'],
+  variable: '--font-lora',
+  display: 'swap',
+  style: ['normal', 'italic'],
+  weight: ['400', '500', '600'],
+});
 
 const ORG_SCHEMA = {
   '@context': 'https://schema.org',
@@ -97,12 +119,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet" />
-      </head>
+    <html lang="en" className={`${displayFont.variable} ${bodyFont.variable} ${loraFont.variable}`}>
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />
