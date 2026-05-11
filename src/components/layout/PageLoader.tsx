@@ -31,11 +31,11 @@ export default function PageLoader({ onComplete }: PageLoaderProps) {
         },
       });
 
-      // Letters rise from below — scoped selector, staggered in sync with counter
+      // Letters rise from below
       tl.fromTo(
         '.loader-letter',
         { yPercent: 120 },
-        { yPercent: 0, duration: 0.7, ease: 'power3.out', stagger: 0.08 },
+        { yPercent: 0, duration: 0.45, ease: 'power3.out', stagger: 0.05 },
         0
       );
 
@@ -43,7 +43,7 @@ export default function PageLoader({ onComplete }: PageLoaderProps) {
       const counter = { val: 0 };
       tl.to(counter, {
         val: 100,
-        duration: 1.5,
+        duration: 0.95,
         ease: 'power2.inOut',
         onUpdate() {
           if (countRef.current) {
@@ -53,15 +53,15 @@ export default function PageLoader({ onComplete }: PageLoaderProps) {
       }, 0);
 
       // Fade label out
-      tl.to(labelRef.current, { opacity: 0, duration: 0.25 }, '-=0.1');
+      tl.to(labelRef.current, { opacity: 0, duration: 0.2 }, '-=0.08');
 
       // Curtain split
       tl.to([topRef.current, botRef.current], {
         scaleY: 0,
-        duration: 0.85,
+        duration: 0.65,
         ease: 'power4.inOut',
-        stagger: 0.05,
-      }, '-=0.15');
+        stagger: 0.04,
+      }, '-=0.12');
 
     }, containerRef); // scope — selectors are relative to containerRef
 

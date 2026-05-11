@@ -39,7 +39,7 @@ const FAQS: FAQItem[] = [
   },
   {
     q: 'Do you work with early-stage startups?',
-    a: 'Often we reserve a few slots each quarter for pre-seed and seed teams who care deeply about craft.',
+    a: "Yes - we work with startups, agencies, and growing brands at every stage. If you have a real problem to solve, we're in.",
     category: 'Engagement',
   },
 ];

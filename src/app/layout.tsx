@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import SmoothScrollProvider   from '@/components/layout/SmoothScrollProvider';
-import CustomCursor          from '@/components/layout/CustomCursor';
-import TransitionProvider    from '@/components/layout/TransitionProvider';
+import SmoothScrollProvider from '@/components/layout/SmoothScrollProvider';
+import CustomCursor         from '@/components/layout/CustomCursor';
+import TransitionProvider   from '@/components/layout/TransitionProvider';
 
 const ORG_SCHEMA = {
   '@context': 'https://schema.org',
@@ -41,7 +41,7 @@ const FAQ_SCHEMA = {
     { '@type': 'Question', name: 'How do we collaborate during a project?', acceptedAnswer: { '@type': 'Answer', text: 'Async updates in Notion or Linear, weekly live reviews on Google Meet, and a shared Figma board for everything visual.' } },
     { '@type': 'Question', name: 'What does it cost?', acceptedAnswer: { '@type': 'Answer', text: 'Pricing is tied to scope — we send a fixed quote after a short discovery call, no hidden line items.' } },
     { '@type': 'Question', name: 'Do you offer revisions?', acceptedAnswer: { '@type': 'Answer', text: 'Yes. Every engagement includes defined revision rounds at each stage until the work lands.' } },
-    { '@type': 'Question', name: 'Do you work with early-stage startups?', acceptedAnswer: { '@type': 'Answer', text: 'Often — we reserve a few slots each quarter for pre-seed and seed teams who care deeply about craft.' } },
+    { '@type': 'Question', name: 'Do you work with early-stage startups?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — we work with startups, agencies, and growing brands at every stage. If you have a real problem to solve, we\'re in.' } },
   ],
 };
 
@@ -98,6 +98,11 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet" />
+      </head>
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(FAQ_SCHEMA) }} />

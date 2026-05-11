@@ -81,12 +81,12 @@ export default function Navbar({ isLoaded }: { isLoaded: boolean }) {
           />
           <span style={{
             fontFamily: 'var(--font-body)',
-            fontSize: '1.5rem',
+            fontSize: '1.2rem',
             fontWeight: 600,
             letterSpacing: '0.02em',
             color: 'var(--text)',
           }}>
-            Schedio
+            SCHEDIO
           </span>
         </Link>
 
