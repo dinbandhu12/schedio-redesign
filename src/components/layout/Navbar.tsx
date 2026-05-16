@@ -58,11 +58,15 @@ export default function Navbar({ isLoaded }: { isLoaded: boolean }) {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          backdropFilter: atTop ? 'none' : 'blur(16px)',
-          WebkitBackdropFilter: atTop ? 'none' : 'blur(16px)',
-          borderBottom: atTop ? '1px solid transparent' : '1px solid var(--border)',
-          background: atTop ? 'transparent' : 'rgba(9,9,8,0.63)',
-          transition: 'background 0.4s, border-color 0.4s',
+          // backdropFilter: atTop ? 'none' : 'blur(16px)',
+          // WebkitBackdropFilter: atTop ? 'none' : 'blur(16px)',
+          // borderBottom: atTop ? '1px solid transparent' : '1px solid var(--border)',
+          // background: atTop ? 'transparent' : 'rgba(9,9,8,0.63)',
+          // transition: 'background 0.4s, border-color 0.4s',
+          backdropFilter: 'none',
+          WebkitBackdropFilter: 'none',
+          borderBottom: '1px solid transparent',
+          background: 'transparent',
         }}
       >
         {/* Logo */}
